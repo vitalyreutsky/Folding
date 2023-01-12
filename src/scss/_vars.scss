@@ -2,11 +2,13 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
-  --container-offset: 15px;
-  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --font-family-GillSans: "GillSans", sans-serif;
+  --font-family-Jost: "Jost", sans-serif;
 
   // colors
-  --light-color: #fff;
+  --light-color: #ffffff;
+  --gold-color: #c19047;
+  --text-black: #161618;
+  --bg-black: #272728;
+  --gray-color: #868686;
 }

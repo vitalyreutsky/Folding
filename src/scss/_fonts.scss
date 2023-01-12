@@ -1,1 +1,11 @@
-// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+//Gill Sans
+@include font-face("GillSans", "../fonts/GillSans-Light", 300, normal);
+@include font-face("GillSans", "../fonts/GillSans-Regular", 400, normal);
+@include font-face("GillSans", "../fonts/GillSans-SemiBold", 600, normal);
+
+//Jost
+@include font-face("Jost", "../fonts/Jost-ExtraLight", 200, normal);
+@include font-face("Jost", "../fonts/Jost-Light", 300, normal);
+@include font-face("Jost", "../fonts/Jost-Regular", 400, normal);
+@include font-face("Jost", "../fonts/Jost-Medium", 500, normal);
+@include font-face("Jost", "../fonts/Jost-SemiBold", 600, normal);
