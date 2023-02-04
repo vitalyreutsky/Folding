@@ -1,3 +1,87 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="container header__container">
+    <nav class="nav nav-left">
+      <ul class="nav__list list-reset">
+        <li class="nav__item">
+          <a href="#" class="nav__link">Главная</a>
+        </li>
+        <li class="nav__item nav__item--sub">
+          <a href="#" class="nav__link">
+            О нас
+            <svg>
+              <use xlink:href="img/sprite.svg#bottom"></use>
+            </svg>
+          </a>
+          <div class="sub-menu">
+            <ul class="sub-menu__list list-reset">
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link nav__link">О компании</a>
+              </li>
+
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link nav__link">Портфолио</a>
+              </li>
+
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link nav__link">Как мы работаем</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Наша продукция</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Стоимость</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="header__logo" href="#">
+      <picture>
+        <source srcset="img/logo.webp" type="image/webp" />
+        <img loading="lazy" src="img/logo.png" class="image" alt="Logo" />
+      </picture>
+    </a>
+
+    <nav class="nav nav-right">
+      <ul class="nav__list list-reset">
+        <li class="nav__item">
+          <a href="#" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header__btn btn btn-reset">
+      <svg>
+        <use xlink:href="img/sprite.svg#phone"></use>
+      </svg>
+      <span>Оставить заявку</span>
+    </button>
+
+    <ul class="header__lang lang list-reset" id="top-lang">
+      <li class="pll-parent-menu-item lang__item-active lang__item">
+        <a class="lang-item lang-item--el" href="#switcher">ru</a>
+        <div class="lang-icon">
+          <svg>
+            <use xlink:href="img/sprite.svg#bottom"></use>
+          </svg>
+          <svg>
+            <use xlink:href="img/sprite.svg#bottom"></use>
+          </svg>
+        </div>
+        <ul class="lang__sub-menu list-reset">
+          <li class="lang-item lang-item-9 lang-item-ge">
+            <a lang="ka-GE" hreflang="ka-GE" href="#">ru</a>
+          </li>
+          <li class="lang-item lang-item-9 lang-item-ge">
+            <a lang="ka-GE" hreflang="ka-GE" href="#">ge</a>
+          </li>
+          <li class="lang-item lang-item-5 lang-item-en lang-item-first">
+            <a lang="en-US" hreflang="en-US" href="#">en</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </header>
