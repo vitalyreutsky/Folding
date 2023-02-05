@@ -1,0 +1,128 @@
+.btn--primary {
+  position: relative;
+  font-size: 0.938vw;
+  line-height: 1.094vw;
+  text-transform: uppercase;
+  padding: 1.042vw 6.302vw 1.042vw 3.125vw;
+  color: var(--light-color);
+  background-color: var(--text-black);
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-out;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 3vw;
+    width: 1px;
+    height: 100%;
+    background-color: var(--gold-color);
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 0.625vw;
+    height: 0.625vw;
+    transform: translateY(-50%) rotate(-90deg);
+    fill: var(--gold-color);
+    transition: all 0.3s ease-out;
+
+    &:first-child {
+      right: 1.3vw;
+    }
+    &:nth-child(2) {
+      right: 1.1vw;
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      right: 1vw;
+    }
+  }
+
+  &:hover {
+    color: var(--text-black);
+    background-color: var(--gold-color);
+    border: 1px solid var(--text-black);
+    &::after {
+      background-color: var(--text-black);
+    }
+    svg {
+      fill: var(--text-black);
+      &:first-child {
+        right: 1.5vw;
+      }
+      &:nth-child(2) {
+        right: 1.1vw;
+        opacity: 1;
+      }
+      &:nth-child(3) {
+        right: 0.7vw;
+      }
+    }
+  }
+}
+
+.btn--tertiary {
+  position: relative;
+  width: 3.125vw;
+  height: 3.125vw;
+  display: flex;
+  flex-shrink: 0;
+  border: 1px solid var(--text-black);
+  border-radius: 5px;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 0.9vw;
+    height: 0.9vw;
+    fill: var(--gold-color);
+    transition: all 0.3s ease-out;
+
+    &:first-child {
+      right: 0.4vw;
+    }
+    &:nth-child(2) {
+      right: 0.7vw;
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      right: 0.8vw;
+    }
+  }
+
+  &:first-child {
+    svg {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+  &:last-child {
+    svg {
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+
+  &:hover {
+    color: var(--text-black);
+    background-color: var(--gold-color);
+    border: 1px solid var(--text-black);
+    &::after {
+      background-color: var(--text-black);
+    }
+    svg {
+      fill: var(--text-black);
+      &:first-child {
+        right: 0.2vw;
+      }
+      &:nth-child(2) {
+        right: 0.7vw;
+        opacity: 1;
+      }
+      &:nth-child(3) {
+        right: 1.2vw;
+      }
+    }
+  }
+}
