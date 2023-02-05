@@ -57,8 +57,58 @@
         opacity: 1;
       }
       &:nth-child(3) {
-        right: 0.7vw;
+        right: 0.75vw;
       }
+    }
+  }
+}
+
+.btn--secondary {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: fit-content;
+  transition: all 0.3s ease-out;
+
+  div,
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.083vw;
+    height: 2.083vw;
+    border: 1px solid var(--text-black);
+    transition: all 0.3s ease-out;
+  }
+
+  div {
+    position: relative;
+    border-radius: 0px 5px 5px 0px;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 0.938vw;
+    line-height: 1.094vw;
+    border-radius: 5px 0px 0px 5px;
+    border-right: 0;
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    width: 0.5vw;
+    height: 0.5vw;
+    transform: translateY(-50%) rotate(-90deg);
+    fill: var(--gold-color);
+    transition: all 0.3s ease-out;
+
+    &:first-child {
+      right: 0.9vw;
+    }
+    &:last-child {
+      right: 0.6vw;
     }
   }
 }
