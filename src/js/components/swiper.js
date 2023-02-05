@@ -14,6 +14,7 @@ const swiper = new Swiper(".hero-swiper", {
   speed: 500,
   loop: true,
   //effect: "fade",
+  autoHeight: true,
   navigation: {
     nextEl: ".hero-swiper__btn-next",
     prevEl: ".hero-swiper__btn-prev",

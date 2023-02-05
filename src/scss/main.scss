@@ -7,7 +7,9 @@
 //подключение мелких компоненто страницы
 @import "./components/title";
 @import "./components/btns";
+@import "./components/main-offset";
 
 // подключения основных компонентов страницы
 @import "./components/header";
 @import "./components/hero";
+@import "./components/products";
