@@ -75,22 +75,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.083vw;
-    height: 2.083vw;
+    width: 1.8vw;
+    height: 1.8vw;
     border: 1px solid var(--text-black);
     transition: all 0.3s ease-out;
   }
 
   div {
     position: relative;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 4px 4px 0px;
   }
 
   span {
     font-weight: 400;
     font-size: 0.938vw;
     line-height: 1.094vw;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 4px 0px 0px 4px;
     border-right: 0;
   }
   svg {
@@ -105,10 +105,10 @@
     transition: all 0.3s ease-out;
 
     &:first-child {
-      right: 0.9vw;
+      right: 0.8vw;
     }
     &:last-child {
-      right: 0.6vw;
+      right: 0.5vw;
     }
   }
 }

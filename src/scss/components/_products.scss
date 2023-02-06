@@ -80,9 +80,12 @@
     &:hover {
       background-color: var(--text-black);
 
-      .product-card__title,
-      .product-card__text {
+      .product-card__title {
         color: var(--light-color);
+      }
+
+      .product-card__text {
+        color: var(--gray-color);
       }
 
       .product-card__btn div,
