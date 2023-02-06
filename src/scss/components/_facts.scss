@@ -1,0 +1,141 @@
+.facts {
+  &__container {
+    position: relative;
+  }
+
+  .products__top {
+    margin: 0;
+  }
+
+  &__top-btn {
+    white-space: nowrap;
+  }
+}
+
+//swiper
+.facts-swiper {
+  position: relative;
+  padding-top: 6.5vw;
+  padding-bottom: 5.4vw;
+  overflow: visible;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0 auto;
+    height: 5vw;
+    background: #161618;
+    opacity: 0.8;
+    filter: blur(75px);
+    z-index: -1;
+  }
+}
+
+.facts-slide {
+  position: relative;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  filter: blur(2px);
+  border-radius: 8px;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//swiper mini
+.facts-swiper {
+  &__mini {
+    overflow: visible;
+  }
+}
+
+.facts-slide {
+  &__mini {
+    position: relative;
+    border-radius: 8px;
+    transition: all 0.3s ease-out;
+
+    cursor: pointer;
+    img {
+      display: block;
+      border-radius: 8px;
+    }
+  }
+}
+
+//facts-btns
+.facts__btn-next,
+.facts__btn-prev {
+  position: absolute;
+  top: 23vw;
+  transform: translateY(-50%);
+  border: none;
+  background-color: var(--text-black);
+  z-index: 1;
+
+  @include for-desktop {
+    &:hover {
+      border: none;
+    }
+  }
+}
+
+.facts__btn-next {
+  right: 0vw;
+}
+
+.facts__btn-prev {
+  left: 0vw;
+}
+
+//active slide
+.facts-swiper .swiper-slide-active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  filter: blur(0);
+  transform: scale(1.2) !important;
+  border-radius: 8px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3.542vw;
+    height: 20vw;
+    background: #161618;
+    filter: blur(50px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3.542vw;
+    height: 20vw;
+    background: #161618;
+    filter: blur(50px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+}
+
+//active slide mini
+.facts-swiper__mini .swiper-slide-thumb-active {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1vw;
+    width: 100%;
+    height: 0.208vw;
+    background: var(--gold-color);
+  }
+}
