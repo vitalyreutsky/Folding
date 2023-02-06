@@ -1,4 +1,4 @@
-.facts {
+.works {
   &__container {
     position: relative;
   }
@@ -13,7 +13,7 @@
 }
 
 //swiper
-.facts-swiper {
+.works-swiper {
   position: relative;
   padding-top: 6.5vw;
   padding-bottom: 5.4vw;
@@ -34,7 +34,7 @@
   }
 }
 
-.facts-slide {
+.works-slide {
   position: relative;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   filter: blur(2px);
@@ -50,13 +50,13 @@
 }
 
 //swiper mini
-.facts-swiper {
+.works-swiper {
   &__mini {
     overflow: visible;
   }
 }
 
-.facts-slide {
+.works-slide {
   &__mini {
     position: relative;
     border-radius: 8px;
@@ -70,9 +70,9 @@
   }
 }
 
-//facts-btns
-.facts__btn-next,
-.facts__btn-prev {
+//works-btns
+.works__btn-next,
+.works__btn-prev {
   position: absolute;
   top: 23vw;
   transform: translateY(-50%);
@@ -87,16 +87,16 @@
   }
 }
 
-.facts__btn-next {
+.works__btn-next {
   right: 0vw;
 }
 
-.facts__btn-prev {
+.works__btn-prev {
   left: 0vw;
 }
 
 //active slide
-.facts-swiper .swiper-slide-active {
+.works-swiper .swiper-slide-active {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   filter: blur(0);
   transform: scale(1.2) !important;
@@ -128,7 +128,7 @@
 }
 
 //active slide mini
-.facts-swiper__mini .swiper-slide-thumb-active {
+.works-swiper__mini .swiper-slide-thumb-active {
   &::after {
     content: "";
     position: absolute;

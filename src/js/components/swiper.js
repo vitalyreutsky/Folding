@@ -33,7 +33,7 @@ const swiper = new Swiper(".hero-swiper", {
   },
 });
 
-//!facts
+//!works
 Swiper.use([
   Navigation,
   Pagination,
@@ -42,7 +42,7 @@ Swiper.use([
   Scrollbar,
   EffectCoverflow,
 ]);
-const factsSwiper = new Swiper(".facts-swiper", {
+const worksSwiper = new Swiper(".works-swiper", {
   slidesPerGroup: 1,
   slidesPerView: 3,
   loop: true,
@@ -64,13 +64,13 @@ const factsSwiper = new Swiper(".facts-swiper", {
     onlyInViewport: true,
   },
   navigation: {
-    nextEl: ".facts__btn-next",
-    prevEl: ".facts__btn-prev",
+    nextEl: ".works__btn-next",
+    prevEl: ".works__btn-prev",
   },
 
   thumbs: {
     swiper: {
-      el: ".facts-swiper__mini",
+      el: ".works-swiper__mini",
       slidesPerView: 6,
       spaceBetween: 30,
       keyboard: {
