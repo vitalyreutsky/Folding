@@ -42,13 +42,14 @@
       left: 3vw;
       width: 1px;
       height: 100%;
-      background-color: var(--gray-color);
+      background-color: var(--text-black);
     }
   }
 
   &__input {
     width: 100%;
     padding: 0.781vw 0.781vw 0.781vw 4vw;
+    border: 1px solid var(--text-black);
     border-radius: 5px;
     outline: none;
     &::placeholder {
@@ -57,9 +58,6 @@
       font-size: 1.146vw;
       line-height: 1.458vw;
     }
-  }
-
-  &__btn {
   }
 }
 
