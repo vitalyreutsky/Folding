@@ -139,5 +139,7 @@
     height: 0.208vw;
     background: var(--gold-color);
     border-radius: 10px;
+    animation-name: fade;
+    animation-duration: 0.5s;
   }
 }

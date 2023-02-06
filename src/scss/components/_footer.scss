@@ -1,0 +1,153 @@
+.footer {
+  background-color: var(--text-black);
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: calc((100% - 91.563vw) / 2);
+  }
+}
+
+.footer-descr {
+  max-width: 23.1vw;
+  padding: 2.396vw 4.7vw 1.302vw 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--gray-color);
+
+  &__logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.2vw;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-bottom: 2.1vw;
+    border: 1px solid var(--gray-color);
+    &::after {
+      background-color: var(--gray-color);
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vw;
+    margin-bottom: 2.135vw;
+  }
+
+  &__title {
+    font-size: 1.354vw;
+    line-height: 1.563vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--light-color);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.26vw;
+  }
+
+  &__phone {
+    font-weight: 400;
+    font-size: 1.042vw;
+    line-height: 1.563vw;
+    color: var(--light-color);
+  }
+
+  &__city {
+    font-weight: 300;
+    font-size: 1.042vw;
+    line-height: 1.458vw;
+    color: var(--gray-color);
+  }
+
+  &__copyright {
+    font-weight: 300;
+    font-size: 0.833vw;
+    line-height: 1.042vw;
+    color: var(--gray-color);
+  }
+}
+
+.footer-nav {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 4.375vw 7vw 7.813vw 7.7vw;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.354vw;
+  }
+
+  &__item {
+    width: fit-content;
+  }
+
+  &__link {
+    font-size: 1.354vw;
+    line-height: 1.563vw;
+    text-transform: uppercase;
+    color: var(--light-color);
+    transition: all 0.3s ease-out;
+    @include for-desktop {
+      &:hover {
+        color: var(--gold-color);
+      }
+    }
+  }
+}
+
+.footer-map {
+  flex-shrink: 0;
+}
+.map {
+  position: relative;
+  width: 34vw;
+}
+.map-img {
+  position: relative;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+.map-marker {
+  img {
+    position: absolute;
+    left: 15.5vw;
+    width: 3.177vw;
+    height: 4.167vw;
+    animation: marker 1.1s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 56%;
+    left: 15.8vw;
+    width: 2.292vw;
+    height: 0.625vw;
+    border-radius: 50%;
+    background-color: var(--gold-color);
+  }
+}
+
+@keyframes marker {
+  0% {
+    top: 40%;
+  }
+  50% {
+    top: 42%;
+  }
+  100% {
+    top: 40%;
+  }
+}

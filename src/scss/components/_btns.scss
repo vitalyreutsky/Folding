@@ -17,6 +17,7 @@
     width: 1px;
     height: 100%;
     background-color: var(--gold-color);
+    transition: all 0.3s ease-out;
   }
   svg {
     position: absolute;
