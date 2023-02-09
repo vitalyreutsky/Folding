@@ -1,9 +1,9 @@
-<header class="header">
+<header class="header fix-block">
   <div class="container header__container">
     <nav class="nav nav-left">
       <ul class="nav__list list-reset">
         <li class="nav__item">
-          <a href="#" class="nav__link">Главная</a>
+          <a href="index.html" class="nav__link">Главная</a>
         </li>
         <li class="nav__item nav__item--sub">
           <a href="#" class="nav__link">
@@ -29,7 +29,7 @@
           </div>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Наша продукция</a>
+          <a href="page-catalog.html" class="nav__link">Наша продукция</a>
         </li>
         <li class="nav__item">
           <a href="#" class="nav__link">Стоимость</a>
@@ -37,7 +37,7 @@
       </ul>
     </nav>
 
-    <a class="header__logo" href="#">
+    <a href="index.html" class="header__logo">
       <picture>
         <source srcset="img/logo.webp" type="image/webp" />
         <img loading="lazy" src="img/logo.png" class="image" alt="Logo" />
@@ -52,7 +52,11 @@
       </ul>
     </nav>
 
-    <button class="header__btn btn btn-reset">
+    <button
+      class="header__btn btn btn-reset"
+      data-graph-path="main-modal"
+      data-graph-animation="fadeInUp"
+    >
       <svg>
         <use xlink:href="img/sprite.svg#phone"></use>
       </svg>

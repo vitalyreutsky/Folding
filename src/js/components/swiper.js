@@ -80,3 +80,46 @@ const worksSwiper = new Swiper(".works-swiper", {
     },
   },
 });
+
+//!catalog swiper
+const catalogSliders = document.querySelectorAll(".catalog-swiper");
+catalogSliders.forEach((slider) => {
+  Swiper.use([Navigation, Pagination, Keyboard]);
+  const catalogSliders = new Swiper(slider, {
+    speed: 700,
+    loop: false,
+    slidesPerGroup: 1,
+    slidesPerView: "auto",
+
+    navigation: {
+      nextEl: slider.previousElementSibling.querySelector(".catalog-next"),
+      prevEl: slider.previousElementSibling.querySelector(".catalog-prev"),
+    },
+  });
+
+  const slides = slider.querySelectorAll(".catalog-slide");
+
+  if (slides.length <= 3) {
+    slider.previousElementSibling
+      .querySelector(".slider-btns")
+      .classList.add("hide-swiper-btns");
+  }
+
+  if (slides.length <= 2) {
+    slides.forEach((item) => {
+      item.style.width = "46.2%";
+    });
+  }
+
+  //if (window.innerWidth < 600) {
+  //  slides.forEach((item) => {
+  //    item.style.width = "89%";
+  //  });
+
+  //  if (slides.length > 1) {
+  //    slider.previousElementSibling
+  //      .querySelector(".slider-btns")
+  //      .classList.remove("hide-swiper-btns");
+  //  }
+  //}
+});

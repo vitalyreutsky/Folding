@@ -177,3 +177,79 @@
     }
   }
 }
+
+.btn--small {
+  position: relative;
+  width: 3.125vw;
+  height: 3.125vw;
+  display: flex;
+  flex-shrink: 0;
+  border: 1px solid var(--text-black);
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 0.4vw;
+    width: 0.7vw;
+    height: 0.7vw;
+    fill: var(--gold-color);
+    transition: all 0.3s ease-out;
+
+    &:first-child {
+      right: 0.3vw;
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      right: 0.6vw;
+    }
+  }
+
+  &:first-child {
+    svg {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+  &:last-child {
+    svg {
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+
+  &:hover {
+    color: var(--text-black);
+    background-color: var(--gold-color);
+    border: 1px solid var(--text-black);
+    &::after {
+      background-color: var(--text-black);
+    }
+    svg {
+      fill: var(--text-black);
+      &:first-child {
+        right: 0.1vw;
+      }
+      &:nth-child(2) {
+        right: 0.5vw;
+        opacity: 1;
+      }
+      &:nth-child(3) {
+        right: 0.9vw;
+      }
+    }
+
+    &:last-child svg {
+      &:first-child {
+        right: 0vw;
+      }
+      &:nth-child(2) {
+        right: 0.4vw;
+        opacity: 1;
+      }
+      &:nth-child(3) {
+        right: 0.8vw;
+      }
+    }
+  }
+}

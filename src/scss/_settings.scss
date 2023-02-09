@@ -8,6 +8,12 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  outline: none;
+  outline-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body,
 html {
   height: 100%;
@@ -47,6 +53,9 @@ a {
 }
 
 .site-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
 

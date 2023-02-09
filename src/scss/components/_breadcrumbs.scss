@@ -1,0 +1,51 @@
+.breadcrumbs {
+  margin-bottom: 2vw;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  &__list {
+    display: flex;
+  }
+
+  &__item-main {
+    position: relative;
+    z-index: 1;
+    &:not(:last-child) {
+      padding-right: 0.5vw;
+      margin-right: 0.5vw;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 65%;
+        background-color: var(--gray-color);
+      }
+    }
+
+    &:last-child {
+      pointer-events: none;
+    }
+  }
+
+  &__item-back {
+    display: none;
+  }
+
+  &__link {
+    color: var(--text-black);
+    font-weight: 400;
+    font-size: 0.833vw;
+    line-height: 0.989vw;
+    svg {
+      width: 0.833vw;
+      height: 0.833vw;
+    }
+  }
+
+  &__link--active {
+    color: var(--gray-color);
+  }
+}

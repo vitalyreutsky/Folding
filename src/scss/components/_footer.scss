@@ -29,6 +29,16 @@
     &::after {
       background-color: var(--gray-color);
     }
+
+    @include for-desktop {
+      &:hover {
+        svg {
+          &:nth-child(3) {
+            right: 0.65vw;
+          }
+        }
+      }
+    }
   }
 
   &__items {
