@@ -185,3 +185,19 @@ if (dynamicGallery) {
 //    popup.openGallery(idx);
 //  });
 //});
+
+//!portfolio-swiper
+Swiper.use([Navigation, Pagination]);
+const heroSwiper = new Swiper(".portfolio-swiper__img", {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 20,
+  speed: 700,
+  loop: false,
+
+  pagination: {
+    el: ".portfolio-swiper__pagination",
+    clickable: true,
+    dynamicBullets: false,
+  },
+});

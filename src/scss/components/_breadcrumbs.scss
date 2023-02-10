@@ -8,6 +8,7 @@
   }
 
   &__item-main {
+    font-family: var(--font-family-Jost);
     position: relative;
     z-index: 1;
     &:not(:last-child) {

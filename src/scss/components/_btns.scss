@@ -218,37 +218,39 @@
     }
   }
 
-  &:hover {
-    color: var(--text-black);
-    background-color: var(--gold-color);
-    border: 1px solid var(--text-black);
-    &::after {
-      background-color: var(--text-black);
-    }
-    svg {
-      fill: var(--text-black);
-      &:first-child {
-        right: 0.1vw;
+  @include for-desktop {
+    &:hover {
+      color: var(--text-black);
+      background-color: var(--gold-color);
+      border: 1px solid var(--text-black);
+      &::after {
+        background-color: var(--text-black);
       }
-      &:nth-child(2) {
-        right: 0.5vw;
-        opacity: 1;
+      svg {
+        fill: var(--text-black);
+        &:first-child {
+          right: 0.1vw;
+        }
+        &:nth-child(2) {
+          right: 0.5vw;
+          opacity: 1;
+        }
+        &:nth-child(3) {
+          right: 0.9vw;
+        }
       }
-      &:nth-child(3) {
-        right: 0.9vw;
-      }
-    }
 
-    &:last-child svg {
-      &:first-child {
-        right: 0vw;
-      }
-      &:nth-child(2) {
-        right: 0.4vw;
-        opacity: 1;
-      }
-      &:nth-child(3) {
-        right: 0.8vw;
+      &:last-child svg {
+        &:first-child {
+          right: 0vw;
+        }
+        &:nth-child(2) {
+          right: 0.4vw;
+          opacity: 1;
+        }
+        &:nth-child(3) {
+          right: 0.8vw;
+        }
       }
     }
   }
