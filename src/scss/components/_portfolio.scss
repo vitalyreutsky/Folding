@@ -46,7 +46,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: auto;
     height: 2.292vw !important;
     background-color: transparent;
     color: var(--text-black);
@@ -103,8 +103,6 @@
 }
 
 //pagination
-.pagination {
-}
 .pagination-list {
   display: flex;
   align-items: center;
@@ -121,7 +119,7 @@
       opacity: 0;
     }
     &:nth-child(3) {
-      right: 0.6vw;
+      right: 0.7vw;
     }
   }
 
@@ -129,25 +127,25 @@
     &:hover {
       svg {
         &:first-child {
-          right: 1.4vw;
+          right: 1.3vw;
         }
         &:nth-child(2) {
-          right: 0.8vw;
+          right: 0.9vw;
         }
         &:nth-child(3) {
-          right: 0.2vw;
+          right: 0.5vw;
         }
       }
 
       &:last-child svg {
         &:first-child {
-          right: 1.4vw;
+          right: 1.3vw;
         }
         &:nth-child(2) {
-          right: 0.8vw;
+          right: 0.9vw;
         }
         &:nth-child(3) {
-          right: 0.2vw;
+          right: 0.5vw;
         }
       }
     }
@@ -159,6 +157,7 @@
   font-size: 1.563vw;
   line-height: 3.125vw;
   color: rgba(22, 22, 24, 0.5);
+  cursor: pointer;
 
   &--active {
     color: var(--text-black);

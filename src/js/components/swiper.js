@@ -201,3 +201,18 @@ const heroSwiper = new Swiper(".portfolio-swiper__img", {
     dynamicBullets: false,
   },
 });
+
+//!recently-swiper
+Swiper.use([Navigation, Pagination]);
+const recentlySwiper = new Swiper(".recently-swiper", {
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  spaceBetween: 20,
+  speed: 700,
+  loop: true,
+
+  navigation: {
+    nextEl: document.querySelector(".recently-next"),
+    prevEl: document.querySelector(".recently-prev"),
+  },
+});
