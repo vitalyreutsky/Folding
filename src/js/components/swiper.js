@@ -7,6 +7,7 @@ import Swiper, {
   Scrollbar,
   EffectCoverflow,
 } from "swiper";
+import lightGallery from "lightgallery";
 
 //!hero-swiper
 Swiper.use([Navigation, Pagination, EffectFade]);
@@ -123,3 +124,64 @@ catalogSliders.forEach((slider) => {
   //  }
   //}
 });
+
+//!single
+Swiper.use([Navigation, Pagination, Keyboard, Thumbs]);
+const singleSwiper = new Swiper(".single-swiper", {
+  slidesPerGroup: 1,
+  spaceBetween: 20,
+  slidesPerView: 1,
+  loop: false,
+  speed: 1000,
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  navigation: {
+    nextEl: ".single__btn-next",
+    prevEl: ".single__btn-prev",
+  },
+
+  thumbs: {
+    swiper: {
+      el: ".single-swiper__mini",
+      slidesPerView: 5,
+      spaceBetween: 15,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+    },
+  },
+});
+
+const gsBgImgSelector = ".swiper-slide img";
+
+const dynamicEl = [...document.querySelectorAll(gsBgImgSelector)].map(
+  (sliderImg) => {
+    return {
+      src: sliderImg.src,
+      thumb: sliderImg.src,
+    };
+  }
+);
+
+const dynamicGallery = document.querySelector(".single-swiper__zoom");
+
+if (dynamicGallery) {
+  const popup = lightGallery(dynamicGallery, {
+    dynamic: true,
+    dynamicEl,
+  });
+
+  dynamicGallery.addEventListener("click", () => {
+    popup.openGallery(0);
+  });
+}
+
+//[...document.querySelectorAll(".single-slide")].map((slide, idx) => {
+//  slide.addEventListener("click", () => {
+//    popup.openGallery(idx);
+//  });
+//});
