@@ -178,3 +178,79 @@
     left: 77%;
   }
 }
+
+@include tablet {
+  .feedback {
+    padding: 13.072vw 0;
+  }
+
+  .feedback-form {
+    width: 100%;
+    padding: 0;
+  }
+
+  .feedback-title {
+    margin-bottom: 1.961vw;
+  }
+
+  .feedback-text {
+    margin-bottom: 7.19vw;
+  }
+
+  .form {
+    gap: 3.922vw;
+  }
+
+  .form__label {
+    svg {
+      left: 2vw;
+      width: 2.614vw;
+      height: 2.614vw;
+    }
+    &::after {
+      left: 6.6vw;
+    }
+  }
+
+  .form__input {
+    padding: 2.5vw 2.5vw 2.5vw 9vw;
+    border-radius: 5px;
+    &::placeholder {
+      font-size: 2.5vw;
+      line-height: 3.66vw;
+    }
+  }
+
+  .custom-checkbox {
+    &__content {
+      font-size: 2.614vw;
+      line-height: 3.66vw;
+    }
+  }
+}
+
+@include tablet {
+  .custom-checkbox {
+    position: relative;
+    left: 3vw;
+
+    &__content {
+      padding-left: 4vw;
+
+      &::before {
+        top: 0.156vw;
+        width: 2.614vw;
+        height: 2.614vw;
+        border-radius: 0.4vw;
+      }
+
+      &::after {
+        left: 0.5vw;
+        top: 0.65vw;
+        width: 1.7vw;
+        height: 1.7vw;
+        border-radius: 0.4vw;
+      }
+    }
+  }
+}

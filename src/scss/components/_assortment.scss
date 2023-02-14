@@ -1,5 +1,6 @@
 .assortment {
-  height: 29.167vw;
+  //height: 29.167vw;
+  height: auto;
   &__container {
     display: flex;
     align-items: center;
@@ -15,9 +16,10 @@
 
 .assortment-img {
   position: relative;
-  left: -2.1vw;
+  top: 1vw;
+  left: -5.1vw;
   width: 47.917vw;
-  height: 37.292vw;
+  height: 40vw;
   display: block;
 }
 
@@ -86,6 +88,85 @@
         &:nth-child(3) {
           top: 50%;
           right: 1.1vw;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .assortment {
+    height: auto;
+    &__container {
+      position: relative;
+      padding: 23vw 3.922vw 10vw;
+      flex-direction: row-reverse;
+      border-radius: 10px;
+    }
+  }
+
+  .assortment-img {
+    position: absolute;
+    top: -13vw;
+    left: 54vw;
+    width: auto;
+    height: 79vw;
+  }
+
+  .assortment-content {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .assortment-title {
+    max-width: 44.183vw;
+    margin-bottom: 3.922vw;
+  }
+
+  .assortment-text {
+    max-width: 55.5vw;
+    margin-bottom: 13vw;
+  }
+
+  .assortment-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    &::after {
+      width: 0.1px;
+    }
+
+    svg {
+      width: 1.699vw;
+      height: 1.699vw;
+      &:first-child {
+        right: 2.5vw;
+        top: 33%;
+      }
+      &:nth-child(2) {
+        top: 36%;
+      }
+      &:nth-child(3) {
+        right: 2.5vw;
+        top: 47%;
+      }
+    }
+
+    &:hover {
+      svg {
+        &:first-child {
+          top: 23%;
+          right: 2.5vw;
+        }
+        &:nth-child(2) {
+          top: 36%;
+          right: 2.5vw;
+        }
+        &:nth-child(3) {
+          top: 49%;
+          right: 2.5vw;
         }
       }
     }

@@ -114,3 +114,71 @@
     fill: var(--text-black);
   }
 }
+
+@include tablet {
+  .facts {
+    .facts-btn {
+      display: none;
+    }
+    .products__top {
+      margin-bottom: 5.621vw;
+    }
+  }
+
+  .facts-items {
+    gap: 0;
+    flex-direction: row;
+    margin-bottom: 13vw;
+  }
+  .facts-item {
+    align-items: stretch;
+    gap: 2.614vw;
+    height: auto;
+  }
+
+  .fact-num {
+    max-width: fit-content;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    &__big {
+      font-size: 10.719vw;
+    }
+
+    &__small {
+      left: 0vw;
+      font-size: 3.399vw;
+    }
+  }
+  .fact-content {
+    height: 100%;
+    padding: 1.961vw;
+    border-radius: 1.307vw;
+  }
+  .fact-img {
+    width: 22.876vw;
+    height: auto;
+    margin-right: 1.961vw;
+    border-radius: 0.915vw;
+  }
+
+  .fact-descr {
+    width: 100%;
+    padding-top: 0;
+    gap: 1.961vw;
+    margin-right: 0;
+  }
+  .fact-title {
+    font-size: 3.66vw;
+    line-height: 4.379vw;
+  }
+  .fact-text {
+    font-size: 2.353vw;
+    line-height: 3.66vw;
+  }
+
+  .facts-swiper__btn {
+    text-align: center;
+    width: 55vw;
+  }
+}

@@ -14,7 +14,7 @@ Swiper.use([Navigation, Pagination, EffectFade]);
 const swiper = new Swiper(".hero-swiper", {
   slidesPerView: "auto",
   spaceBetween: 50,
-  speed: 500,
+  speed: 1000,
   loop: true,
   //effect: "fade",
   autoHeight: true,
@@ -45,7 +45,7 @@ function swiperCard() {
       let swiper = new Swiper(".mobile-products__swiper", {
         slidesPerView: 1,
         spaceBetween: 50,
-        speed: 500,
+        speed: 1000,
         loop: true,
         autoHeight: true,
         navigation: {
@@ -72,6 +72,43 @@ function swiperCard() {
 }
 swiperCard();
 window.addEventListener("resize", swiperCard);
+
+//!mobile-swiper-products
+var initFacts = false;
+function swiperCardFacts() {
+  if (window.innerWidth <= 1200) {
+    if (!initFacts) {
+      initFacts = true;
+      Swiper.use([Navigation, Pagination, EffectFade]);
+      let swiper = new Swiper(".facts-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        speed: 1000,
+        loop: true,
+        navigation: {
+          nextEl: ".facts-swiper__prev",
+          prevEl: ".facts-swiper__next",
+        },
+
+        pagination: {
+          el: ".facts-swiper__fraction",
+          type: "fraction",
+
+          renderFraction: function (currentClass, totalClass) {
+            return `
+           <span class="hero-swiper__current">0<span class="${currentClass}"></span></span><span class="hero-swiper__total">0<span class="${totalClass}"></span></span>
+        `;
+          },
+        },
+      });
+    }
+  } else if (initFacts) {
+    swiper.destroy();
+    initFacts = false;
+  }
+}
+swiperCardFacts();
+window.addEventListener("resize", swiperCardFacts);
 
 //!works
 Swiper.use([
@@ -149,7 +186,7 @@ const catalogSliders = document.querySelectorAll(".catalog-swiper");
 catalogSliders.forEach((slider) => {
   Swiper.use([Navigation, Pagination, Keyboard]);
   const catalogSliders = new Swiper(slider, {
-    speed: 700,
+    speed: 1000,
     loop: false,
     slidesPerGroup: 1,
     slidesPerView: "auto",
@@ -270,7 +307,7 @@ const recentlySwiper = new Swiper(".recently-swiper", {
   slidesPerView: 3,
   slidesPerGroup: 1,
   spaceBetween: 20,
-  speed: 700,
+  speed: 1000,
   loop: true,
 
   navigation: {
@@ -284,7 +321,7 @@ Swiper.use([Navigation, Pagination]);
 const priceSwiper = new Swiper(".price-swiper", {
   slidesPerView: 1,
   spaceBetween: 20,
-  speed: 700,
+  speed: 1000,
   loop: true,
 
   pagination: {
