@@ -16,7 +16,7 @@
     right: 3vw;
     width: 1px;
     height: 100%;
-    background-color: var(--gold-color);
+    background-color: var(--gray-color);
     transition: all 0.3s ease-out;
   }
   svg {
@@ -251,6 +251,84 @@
         &:nth-child(3) {
           right: 0.8vw;
         }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .btn--primary {
+    font-size: 2.353vw;
+    line-height: 2.745vw;
+    padding: 2.5vw 6.302vw 2.5vw 3.125vw;
+    border-radius: 5px;
+    &::after {
+      right: 6.6vw;
+    }
+    svg {
+      width: 1.699vw;
+      height: 1.699vw;
+
+      &:first-child {
+        right: 1.7vw;
+      }
+      &:nth-child(2) {
+        right: 2.2vw;
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        right: 2.7vw;
+      }
+    }
+
+    &:hover {
+      svg {
+        &:first-child {
+          right: 1.5vw;
+        }
+        &:nth-child(2) {
+          right: 2.5vw;
+          opacity: 1;
+        }
+        &:nth-child(3) {
+          right: 3.5vw;
+        }
+      }
+    }
+  }
+
+  .btn--small {
+    width: 7.843vw;
+    height: 7.843vw;
+    border-radius: 5px;
+    svg {
+      width: 1.699vw;
+      height: 1.699vw;
+    }
+  }
+
+  .btn--secondary {
+    span {
+      width: 5.229vw;
+      height: 3.922vw;
+      font-size: 2.353vw;
+      line-height: 2.745vw;
+    }
+
+    div {
+      width: 3.922vw;
+      height: 3.922vw;
+    }
+
+    svg {
+      width: 1.307vw;
+      height: 1.307vw;
+
+      &:first-child {
+        right: 1vw;
+      }
+      &:last-child {
+        right: 1.7vw;
       }
     }
   }

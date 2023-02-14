@@ -1,3 +1,9 @@
 .main-offset {
   margin-bottom: 8.333vw;
 }
+
+@include tablet {
+  .main-offset {
+    margin-bottom: 11.765vw;
+  }
+}

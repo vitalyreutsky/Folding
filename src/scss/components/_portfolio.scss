@@ -59,8 +59,7 @@
 .portfolio-swiper {
   &__pagination {
     width: 25vw !important;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     justify-content: center;
     gap: 0.5vw;
     position: absolute;
@@ -123,30 +122,28 @@
     }
   }
 
-  @include for-desktop {
-    &:hover {
-      svg {
-        &:first-child {
-          right: 1.3vw;
-        }
-        &:nth-child(2) {
-          right: 0.9vw;
-        }
-        &:nth-child(3) {
-          right: 0.5vw;
-        }
+  &:hover {
+    svg {
+      &:first-child {
+        right: 1.3vw;
       }
+      &:nth-child(2) {
+        right: 0.9vw;
+      }
+      &:nth-child(3) {
+        right: 0.5vw;
+      }
+    }
 
-      &:last-child svg {
-        &:first-child {
-          right: 1.3vw;
-        }
-        &:nth-child(2) {
-          right: 0.9vw;
-        }
-        &:nth-child(3) {
-          right: 0.5vw;
-        }
+    &:last-child svg {
+      &:first-child {
+        right: 1.3vw;
+      }
+      &:nth-child(2) {
+        right: 0.9vw;
+      }
+      &:nth-child(3) {
+        right: 0.5vw;
       }
     }
   }
@@ -161,5 +158,50 @@
 
   &--active {
     color: var(--text-black);
+  }
+}
+
+@include tablet {
+  .pagination-btn {
+    svg {
+      &:first-child {
+        right: 1.5vw;
+      }
+      &:nth-child(2) {
+        right: 2vw;
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        right: 2.5vw;
+      }
+    }
+
+    &:hover {
+      svg {
+        &:first-child {
+          right: 1vw;
+        }
+        &:nth-child(2) {
+          right: 2vw;
+          opacity: 1;
+        }
+        &:nth-child(3) {
+          right: 3vw;
+        }
+      }
+
+      &:last-child svg {
+        &:first-child {
+          right: 0.8vw;
+        }
+        &:nth-child(2) {
+          right: 1.8vw;
+          opacity: 1;
+        }
+        &:nth-child(3) {
+          right: 2.8vw;
+        }
+      }
+    }
   }
 }

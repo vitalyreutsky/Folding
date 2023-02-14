@@ -63,3 +63,40 @@
     transform: translateZ(0);
   }
 }
+
+@include tablet {
+  .quote {
+    height: 90vw;
+    &__container {
+      padding-top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .quote-content {
+    gap: 3.922vw;
+    max-width: 91.563vw;
+    img {
+      width: 16.078vw;
+      height: 13.333vw;
+    }
+  }
+
+  .quote-text {
+    font-size: 3.922vw;
+    line-height: 5.882vw;
+  }
+
+  .quote-animation {
+    &__column {
+      padding: 0 2vw;
+    }
+
+    &__item {
+      width: 50vw;
+      border-radius: 1.307vw;
+    }
+  }
+}

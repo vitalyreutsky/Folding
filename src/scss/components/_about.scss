@@ -1,0 +1,230 @@
+.about {
+  .process-top {
+    background-image: none;
+  }
+
+  .description-top__img {
+    width: auto;
+    height: 5.573vw;
+    flex-shrink: 0;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .description-top {
+    justify-content: flex-start;
+    gap: 1.563vw;
+  }
+
+  .description-top__title {
+    margin-bottom: 3vw;
+  }
+
+  .description-top__text {
+    font-weight: 300;
+    font-size: 1.771vw;
+    line-height: 2.083vw;
+  }
+
+  .description-item {
+    height: 100%;
+    align-items: stretch;
+  }
+
+  .description-left {
+    align-items: flex-start;
+    width: 14.1vw;
+  }
+
+  .description-right {
+    justify-content: space-between;
+
+    .btn {
+      font-size: 0.833vw;
+      line-height: 1.094vw;
+      width: 12vw;
+      padding: 0.5vw 4.302vw 0.5vw 1.125vw;
+    }
+  }
+
+  .description-img {
+    width: 29.479vw;
+    height: auto;
+    flex-shrink: 1;
+  }
+}
+
+//partners
+
+.partners-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 4.8vw 7.813vw;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+.partners-descr {
+  display: flex;
+  flex-direction: column;
+  gap: 3.4vw;
+  max-width: 37.552vw;
+}
+
+.partners-btn {
+  width: 15vw;
+  color: var(--text-black);
+  background-color: transparent;
+  border-color: var(--gray-color);
+  &::after {
+    background-color: var(--gray-color);
+  }
+}
+
+.partners-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.563vw;
+}
+.partners-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+  align-items: center;
+  width: 13.958vw;
+  height: 7.969vw;
+  background-color: var(--light-color);
+  border-radius: 6px;
+  overflow: hidden;
+  img {
+    display: block;
+    flex-shrink: 0;
+    height: 6vw;
+    width: 10vw;
+    object-fit: contain;
+    transform: translateY(70%);
+    transition: all 0.3s linear;
+  }
+}
+
+.partners-img:nth-child(1),
+.partners-img:nth-child(5) {
+  flex-direction: column;
+}
+
+.partners-img:nth-child(2),
+.partners-img:nth-child(4) {
+  flex-direction: row;
+  img {
+    transform: translate(65%, 0);
+  }
+}
+
+.partners-img:nth-child(3) {
+  flex-direction: row;
+  img {
+    transform: translate(-65%, 0);
+  }
+}
+
+.animation-partner--x img {
+  transform: translate(0, -70%);
+}
+
+.animation-partner--y img {
+  transform: translate(-65%, 0) !important;
+}
+
+.animation-partner--y-left img {
+  transform: translate(65%, 0) !important;
+}
+
+//benefits
+.benefits-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.563vw;
+}
+.benefits-item {
+  position: relative;
+  height: 17.292vw;
+  border-radius: 10px;
+  transition: all 0.35s ease-in;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.35s ease-in;
+  }
+}
+
+.benefits-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 4.688vw;
+  width: 100%;
+  padding: 1vw;
+  background-color: var(--text-black);
+  backdrop-filter: blur(5px);
+  transition: all 0.35s ease-in;
+  z-index: 1;
+}
+
+.benefits-title {
+  font-family: var(--font-family-Jost);
+  font-weight: 600;
+  font-size: 1.4vw;
+  line-height: 2.083vw;
+  color: var(--light-color);
+  margin-bottom: 0.521vw;
+}
+
+.benefits-text {
+  font-weight: 300;
+  font-size: 1.042vw;
+  line-height: 1.183vw;
+  color: var(--light-color);
+  transition: all 0.35s ease-in;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.benefits-num {
+  display: block;
+  width: 100%;
+  text-align: end;
+  font-family: var(--font-family-Jost);
+  font-weight: 400;
+  font-size: 1.563vw;
+  line-height: 2.24vw;
+  color: var(--gold-color);
+  transition: all 0.35s ease-in;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@include for-desktop {
+  .benefits-item:hover {
+    img {
+      transform: scale(1.2) !important;
+    }
+
+    .benefits-content {
+      max-height: 70%;
+      background: rgba(0, 0, 0, 0.64);
+      backdrop-filter: blur(5px);
+    }
+
+    .benefits-text,
+    .benefits-num {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

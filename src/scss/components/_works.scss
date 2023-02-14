@@ -143,3 +143,74 @@
     animation-duration: 0.5s;
   }
 }
+
+@include tablet {
+  .works {
+    margin-bottom: 9.5vw;
+  }
+
+  .works__top-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .works-content {
+    margin-bottom: 6vw;
+  }
+
+  //swiper
+  .works-swiper {
+    padding-top: 17vw;
+    padding-bottom: 17vw;
+    &::after {
+      height: 5vw;
+    }
+  }
+
+  .works-slide {
+    border-radius: 8px;
+  }
+
+  //swiper mini
+  .works-slide {
+    &__mini {
+      border-radius: 8px;
+      img {
+        border-radius: 8px;
+      }
+    }
+  }
+
+  //works-btns
+  .works__btn-next,
+  .works__btn-prev {
+    top: 47%;
+    z-index: 1;
+  }
+
+  //active slide
+  .works-swiper .swiper-slide-active {
+    border-radius: 8px;
+    transform: scale(2.1) !important;
+
+    &::after {
+      width: 3.542vw;
+      height: 20vw;
+    }
+
+    &::before {
+      width: 3.542vw;
+      height: 20vw;
+    }
+  }
+
+  //active slide mini
+  .works-swiper__mini .swiper-slide-thumb-active {
+    &::after {
+      bottom: -2vw;
+      height: 0.4vw;
+      border-radius: 1.307vw;
+    }
+  }
+}

@@ -99,3 +99,92 @@
     }
   }
 }
+
+.mobile-products__swiper-bottom {
+  display: none;
+}
+
+@include tablet {
+  .products {
+    &__top {
+      margin-bottom: 5.621vw;
+    }
+
+    &__top-descr {
+      gap: 1.961vw;
+    }
+
+    &__top-btn {
+      display: none;
+    }
+
+    &__items {
+      display: flex;
+      gap: 0;
+      margin-bottom: 5.229vw;
+    }
+  }
+
+  .product-card {
+    padding: 2.614vw;
+    border-radius: 1.307vw;
+    &__img {
+      height: 35.294vw;
+      margin-bottom: 2.614vw;
+    }
+
+    &__title {
+      font-size: 3.66vw;
+      line-height: 4.379vw;
+      margin-bottom: 1.961vw;
+    }
+
+    &__text {
+      font-size: 2.876vw;
+      line-height: 3.922vw;
+      margin-bottom: 3.529vw;
+    }
+  }
+
+  .mobile-products__swiper .hero-swiper {
+    gap: 3.922vw;
+
+    &__pagination {
+      gap: 1.961vw;
+      flex-shrink: 0;
+    }
+
+    &__btn-next,
+    &__btn-prev {
+      display: flex;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      width: 53vw;
+    }
+
+    &__current {
+      font-size: 7vw;
+      line-height: 7vw;
+      padding-right: 1.307vw;
+      &::after {
+        top: 50%;
+        right: 0;
+        width: 0.131vw;
+        height: 3vw;
+      }
+    }
+
+    &__total {
+      font-size: 3vw;
+      line-height: 4vw;
+      padding-left: 1.307vw;
+    }
+  }
+
+  .mobile-products__swiper-bottom {
+    display: flex;
+  }
+}

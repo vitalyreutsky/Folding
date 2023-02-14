@@ -101,3 +101,82 @@
     height: 100%;
   }
 }
+
+@include tablet {
+  .hero {
+    padding-top: 28.305px;
+    &__container {
+      flex-direction: column-reverse;
+      padding: 0;
+      gap: 2.614vw;
+      > div {
+        flex: auto;
+      }
+    }
+  }
+
+  .hero-swiper {
+    margin-right: 0;
+    max-width: 93vw;
+    gap: 3.922vw;
+    min-height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+
+    &__slide {
+      gap: 1.961vw;
+    }
+
+    &__title {
+      font-size: 5.55vw;
+      line-height: 7.843vw;
+      margin-bottom: 0;
+    }
+
+    &__text {
+      gap: 1.961vw;
+      margin-bottom: 0;
+    }
+
+    &__pagination {
+      gap: 1.961vw;
+      flex-shrink: 0;
+    }
+
+    &__btn-next,
+    &__btn-prev {
+      display: flex;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      width: 53vw;
+    }
+
+    &__current {
+      font-size: 7vw;
+      line-height: 7vw;
+      padding-right: 1.307vw;
+      &::after {
+        top: 50%;
+        right: 0;
+        width: 0.131vw;
+        height: 2.5vw;
+      }
+    }
+
+    &__total {
+      font-size: 3vw;
+      line-height: 4vw;
+      padding-left: 1.307vw;
+    }
+  }
+
+  .hero-img {
+    width: 100%;
+    min-height: auto;
+    height: 56.209vw;
+    border-radius: 0;
+  }
+}

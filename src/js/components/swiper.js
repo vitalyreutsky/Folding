@@ -13,6 +13,7 @@ import lightGallery from "lightgallery";
 Swiper.use([Navigation, Pagination, EffectFade]);
 const swiper = new Swiper(".hero-swiper", {
   slidesPerView: "auto",
+  spaceBetween: 50,
   speed: 500,
   loop: true,
   //effect: "fade",
@@ -34,6 +35,44 @@ const swiper = new Swiper(".hero-swiper", {
   },
 });
 
+//!mobile-swiper-products
+var init = false;
+function swiperCard() {
+  if (window.innerWidth <= 1200) {
+    if (!init) {
+      init = true;
+      Swiper.use([Navigation, Pagination, EffectFade]);
+      let swiper = new Swiper(".mobile-products__swiper", {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        speed: 500,
+        loop: true,
+        autoHeight: true,
+        navigation: {
+          nextEl: ".mobile-products__swiper-next",
+          prevEl: ".mobile-products__swiper-prev",
+        },
+
+        pagination: {
+          el: ".mobile-products__swiper-fraction",
+          type: "fraction",
+
+          renderFraction: function (currentClass, totalClass) {
+            return `
+           <span class="hero-swiper__current">0<span class="${currentClass}"></span></span><span class="hero-swiper__total">0<span class="${totalClass}"></span></span>
+        `;
+          },
+        },
+      });
+    }
+  } else if (init) {
+    swiper.destroy();
+    init = false;
+  }
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);
+
 //!works
 Swiper.use([
   Navigation,
@@ -51,15 +90,6 @@ const worksSwiper = new Swiper(".works-swiper", {
   speed: 1000,
   effect: "coverflow",
 
-  coverflowEffect: {
-    rotate: 50,
-    stretch: -60,
-    depth: 100,
-    modifier: 1,
-    slideShadows: false,
-    scale: 0.8,
-  },
-
   keyboard: {
     enabled: true,
     onlyInViewport: true,
@@ -69,14 +99,46 @@ const worksSwiper = new Swiper(".works-swiper", {
     prevEl: ".works__btn-prev",
   },
 
+  breakpoints: {
+    0: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: -60,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+        scale: 1.5,
+      },
+    },
+    1200: {
+      coverflowEffect: {
+        rotate: 50,
+        stretch: -60,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+        scale: 0.8,
+      },
+    },
+  },
+
   thumbs: {
     swiper: {
       el: ".works-swiper__mini",
-      slidesPerView: 6,
       spaceBetween: 30,
       keyboard: {
         enabled: true,
         onlyInViewport: true,
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 3.1,
+        },
+        1200: {
+          slidesPerView: 6,
+        },
       },
     },
   },
@@ -214,5 +276,20 @@ const recentlySwiper = new Swiper(".recently-swiper", {
   navigation: {
     nextEl: document.querySelector(".recently-next"),
     prevEl: document.querySelector(".recently-prev"),
+  },
+});
+
+//!price swiper
+Swiper.use([Navigation, Pagination]);
+const priceSwiper = new Swiper(".price-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  speed: 700,
+  loop: true,
+
+  pagination: {
+    el: ".price-swiper__pagination",
+    clickable: true,
+    dynamicBullets: false,
   },
 });

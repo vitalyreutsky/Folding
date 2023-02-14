@@ -13,3 +13,15 @@
     font-weight: 600;
   }
 }
+
+@include tablet {
+  .title-page {
+    font-size: 5.752vw;
+    line-height: 7.843vw;
+  }
+
+  .text-page {
+    font-size: 3.922vw;
+    line-height: 4.444vw;
+  }
+}

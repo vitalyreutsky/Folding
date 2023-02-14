@@ -1,43 +1,113 @@
 <header class="header fix-block">
   <div class="container header__container">
-    <nav class="nav nav-left">
-      <ul class="nav__list list-reset">
-        <li class="nav__item">
-          <a href="index.html" class="nav__link">Главная</a>
-        </li>
-        <li class="nav__item nav__item--sub">
-          <a href="#" class="nav__link">
-            О нас
-            <svg>
-              <use xlink:href="img/sprite.svg#bottom"></use>
-            </svg>
+    <button
+      class="burger"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      data-burger
+    >
+      <span class="burger__line"></span>
+    </button>
+
+    <div class="menu">
+      <div class="menu__wrapper" data-menu>
+        <div class="menu__top">
+          <a href="index.html" class="menu__logo">
+            <picture>
+              <source srcset="img/logo.webp" type="image/webp" />
+              <img loading="lazy" src="img/logo.png" class="image" alt="Logo" />
+            </picture>
           </a>
-          <div class="sub-menu">
-            <ul class="sub-menu__list list-reset">
-              <li class="sub-menu__item">
-                <a href="#" class="sub-menu__link nav__link">О компании</a>
-              </li>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Главная</a>
+            </li>
+            <li class="nav__item nav__item--sub">
+              <a href="#" class="nav__link">
+                О нас
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+              </a>
+              <div class="sub-menu">
+                <ul class="sub-menu__list list-reset">
+                  <li class="sub-menu__item">
+                    <a href="page-about.html" class="sub-menu__link nav__link"
+                      >О компании</a
+                    >
+                  </li>
 
-              <li class="sub-menu__item">
-                <a href="page-portfolio.html" class="sub-menu__link nav__link"
-                  >Портфолио</a
-                >
-              </li>
+                  <li class="sub-menu__item">
+                    <a
+                      href="page-portfolio.html"
+                      class="sub-menu__link nav__link"
+                      >Портфолио</a
+                    >
+                  </li>
 
-              <li class="sub-menu__item">
-                <a href="#" class="sub-menu__link nav__link">Как мы работаем</a>
-              </li>
-            </ul>
+                  <li class="sub-menu__item">
+                    <a href="page-process.html" class="sub-menu__link nav__link"
+                      >Как мы работаем</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="page-catalog.html" class="nav__link">Наша продукция</a>
+            </li>
+            <li class="nav__item">
+              <a href="page-price.html" class="nav__link">Стоимость</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__form">
+          <div class="feedback-form">
+            <h2 class="title-page feedback-title modal-title">
+              Обратный звонок
+            </h2>
+            <p class="text-page feedback-text modal-text">
+              Оставьте заявку и наш менеджер перезвонит вам в течение 15 минут
+            </p>
+            <form class="form">
+              <label class="form__label">
+                <svg>
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+                <input
+                  class="input-reset form__input form__input--name"
+                  placeholder="Ваше имя"
+                />
+              </label>
+              <label class="form__label">
+                <svg>
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                <input
+                  class="input-reset form__input form__input--phone"
+                  placeholder="Ваш номер"
+                />
+              </label>
+
+              <button class="form__btn btn btn-reset btn--primary modal-btn">
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <span>Отправить</span>
+              </button>
+            </form>
           </div>
-        </li>
-        <li class="nav__item">
-          <a href="page-catalog.html" class="nav__link">Наша продукция</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Стоимость</a>
-        </li>
-      </ul>
-    </nav>
+        </div>
+      </div>
+    </div>
 
     <a href="index.html" class="header__logo">
       <picture>
@@ -48,8 +118,8 @@
 
     <nav class="nav nav-right">
       <ul class="nav__list list-reset">
-        <li class="nav__item">
-          <a href="#" class="nav__link">Контакты</a>
+        <li class="nav__item" data-da=".nav__list,1200,last">
+          <a href="page-contacts.html" class="nav__link">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -76,7 +146,7 @@
             <use xlink:href="img/sprite.svg#bottom"></use>
           </svg>
         </div>
-        <ul class="lang__sub-menu list-reset">
+        <ul class="lang__sub-menu list-reset" data-da=".menu__wrapper,1200,2">
           <li class="lang-item lang-item-9 lang-item-ge">
             <a lang="ka-GE" hreflang="ka-GE" href="#">ru</a>
           </li>
