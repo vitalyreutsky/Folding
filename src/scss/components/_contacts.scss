@@ -37,7 +37,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 63%;
+      top: 30vw;
       left: 50%;
       width: 2.292vw;
       transform: translateX(-50%);
@@ -50,13 +50,13 @@
 
 @keyframes contacts-marker {
   0% {
-    top: 55%;
+    top: 27vw;
   }
   50% {
-    top: 57%;
+    top: 28vw;
   }
   100% {
-    top: 55%;
+    top: 27vw;
   }
 }
 
@@ -168,5 +168,140 @@
     font-weight: 400;
     font-size: 1.146vw;
     line-height: 1.458vw;
+  }
+}
+
+@include tablet {
+  .contacts {
+    padding-top: 12vw;
+  }
+
+  .contacts-map {
+    margin-bottom: 1.961vw;
+    height: 67.451vw;
+    border-radius: 0;
+
+    &__marker {
+      img {
+        top: 50%;
+        left: 50%;
+        width: 7.974vw;
+        height: 10.458vw;
+      }
+
+      &::after {
+        top: 67vw;
+        width: 5.752vw;
+        height: 1.569vw;
+      }
+    }
+  }
+
+  @keyframes contacts-marker {
+    0% {
+      top: 61vw;
+    }
+    50% {
+      top: 59vw;
+    }
+    100% {
+      top: 61vw;
+    }
+  }
+
+  .contacts-items {
+    gap: 3.922vw;
+  }
+  .contacts-item {
+    border-radius: 0;
+  }
+
+  .contacts-adress {
+    flex-direction: column;
+    padding: 2.614vw;
+
+    &__city {
+      margin-bottom: 1.307vw;
+      width: 100%;
+      text-align: left;
+      font-size: 3.66vw;
+      line-height: 5.229vw;
+    }
+
+    &__place,
+    &__phone {
+      gap: 1.307vw;
+      svg {
+        width: 3.137vw;
+        height: 3.137vw;
+      }
+      span {
+        font-size: 2.353vw;
+        line-height: 3.66vw;
+      }
+    }
+
+    .header__btn span {
+      display: block;
+    }
+
+    &__btn {
+      font-size: 2.353vw;
+      line-height: 2.745vw;
+      width: 100%;
+      height: 5.752vw;
+      padding: 0;
+      border-radius: 0.654vw;
+      &::after {
+        right: 7vw;
+        width: 0.5px;
+      }
+      svg {
+        margin-right: 2vw;
+      }
+      span {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .contacts-adress__info {
+    gap: 0;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2.614vw;
+  }
+
+  .contacts-person {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2.614vw;
+    &__name {
+      width: 50%;
+      padding: 0;
+      font-size: 2.353vw;
+      line-height: 4.706vw;
+      border-right: none;
+    }
+
+    &__profession {
+      order: 1;
+      text-align: left;
+      width: 50%;
+      padding: 0;
+      font-size: 2.353vw;
+      line-height: 4.706vw;
+      border-right: none;
+    }
+
+    &__mail {
+      width: auto;
+      padding: 0;
+      font-size: 2.353vw;
+      line-height: 4.706vw;
+    }
   }
 }

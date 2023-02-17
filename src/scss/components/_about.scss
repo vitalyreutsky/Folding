@@ -13,6 +13,11 @@
       height: 100%;
     }
   }
+
+  .mobile-btn {
+    display: none;
+  }
+
   .description-top {
     justify-content: flex-start;
     gap: 1.563vw;
@@ -57,7 +62,6 @@
 }
 
 //partners
-
 .partners-inner {
   display: flex;
   align-items: flex-end;
@@ -164,6 +168,10 @@
 }
 
 .benefits-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1vw;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -182,7 +190,6 @@
   font-size: 1.4vw;
   line-height: 2.083vw;
   color: var(--light-color);
-  margin-bottom: 0.521vw;
 }
 
 .benefits-text {
@@ -226,5 +233,156 @@
       opacity: 1;
       visibility: visible;
     }
+  }
+}
+
+@include tablet {
+  .about {
+    .process-top {
+      background-position: 50% 2vw;
+    }
+
+    .description-top__img {
+      height: 13.333vw;
+    }
+    .description-top {
+      gap: 2.614vw;
+      align-items: flex-start;
+      margin-bottom: 13.072vw;
+    }
+
+    .description-top__title {
+      margin-bottom: 4.837vw;
+    }
+
+    .description-top__text {
+      font-size: 3.8vw;
+      line-height: 4.706vw;
+    }
+
+    .description-left {
+      width: 35%;
+    }
+
+    .description-right {
+      max-width: 65%;
+      .btn {
+        display: none;
+        font-size: 0.833vw;
+        line-height: 1.094vw;
+        width: 60%;
+        padding: 0.5vw 4.302vw 0.5vw 1.125vw;
+      }
+    }
+
+    .description-img {
+      width: 65%;
+      margin-bottom: 3.268vw;
+    }
+
+    .mobile-btn {
+      display: block;
+      width: 65%;
+      height: 5.752vw;
+      padding: 0;
+      color: var(--text-black);
+      background-color: transparent;
+      border-color: var(--text-black);
+      &::after {
+        background-color: var(--text-black);
+      }
+    }
+  }
+
+  //partners
+  .partners-inner {
+    flex-direction: column;
+    padding: 6.536vw 2.614vw;
+    border-radius: 1.307vw;
+
+    .title-page {
+      br {
+        display: none;
+      }
+    }
+  }
+  .partners-descr {
+    display: flex;
+    flex-direction: column;
+    gap: 3.4vw;
+    max-width: 100%;
+    margin-bottom: 3.268vw;
+  }
+
+  .partners-btn {
+    width: 100%;
+  }
+
+  .partners-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.614vw;
+    margin-bottom: 3.922vw;
+  }
+  .partners-img {
+    gap: 7vw;
+    width: 100%;
+    height: 20vw;
+    border-radius: 0.784vw;
+    img {
+      height: 13vw;
+      width: 27vw;
+    }
+  }
+
+  //benefits
+  .benefits-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.563vw;
+  }
+  .benefits-item {
+    height: 35.948vw;
+    border-radius: 1.307vw;
+  }
+
+  .benefits-item--active .benefits-item {
+    img {
+      transform: scale(1.2) !important;
+    }
+  }
+
+  .benefits-item--active .benefits-content {
+    max-height: 100%;
+    //height: 21vw;
+    background: rgba(0, 0, 0, 0.64);
+    backdrop-filter: blur(5px);
+    transition: all 2s ease-out;
+  }
+
+  .benefits-item--active .benefits-text,
+  .benefits-num {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .benefits-content {
+    max-height: 9vw;
+    padding: 2vw;
+  }
+
+  .benefits-title {
+    font-size: 2.614vw;
+    line-height: 4.34vw;
+    margin-bottom: 0.521vw;
+  }
+
+  .benefits-text {
+    font-size: 1.8vw;
+    line-height: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  .benefits-num {
+    font-size: 2vw;
+    line-height: 2vw;
   }
 }

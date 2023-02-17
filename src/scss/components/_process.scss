@@ -83,3 +83,61 @@
     height: 100%;
   }
 }
+
+@include tablet {
+  .process {
+    &-wrapper {
+      max-width: 91.563vw;
+      padding: 6.536vw 2.614vw;
+      top: -6vw;
+    }
+
+    &-wrapper__top {
+      margin-bottom: 6.771vw;
+
+      .btn {
+        display: none;
+      }
+    }
+
+    &-top {
+      height: 44.837vw;
+    }
+
+    .breadcrumbs {
+      padding-top: 12vw;
+    }
+
+    .description-item {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .description-left {
+      width: 40%;
+    }
+
+    .description-right {
+      max-width: 60%;
+      margin-bottom: 2.614vw;
+    }
+
+    .description-img {
+      width: 60%;
+    }
+  }
+
+  .description-subtitle {
+    font-size: 3.66vw;
+    line-height: 5.229vw;
+  }
+
+  .description-items {
+    gap: 5.229vw;
+  }
+
+  .description-img {
+    height: 30.85vw;
+    border-radius: 1.307vw;
+  }
+}

@@ -79,3 +79,53 @@
     }
   }
 }
+
+@include tablet {
+  .error {
+    padding-top: 12vw;
+
+    &-container {
+    }
+
+    .products__top {
+    }
+
+    .products__top-descr {
+      gap: 1.961vw;
+      margin-bottom: 1.094vw;
+    }
+
+    .title-page {
+      text-align: center;
+    }
+
+    .text-page {
+      text-align: center;
+      font-size: 2.614vw;
+      line-height: 3.922vw;
+      max-width: 100%;
+    }
+  }
+
+  .error-image {
+    left: 3.3vw;
+    width: 100%;
+  }
+
+  .error-present {
+    height: 13.987vw;
+  }
+
+  .btn--present {
+    padding: 0 11vw 0 4vw;
+    height: 7.843vw;
+    font-size: 2.353vw;
+    line-height: 2.745vw;
+    img {
+      top: -60%;
+      right: -14%;
+      width: 15.163vw;
+      height: 15.817vw;
+    }
+  }
+}
