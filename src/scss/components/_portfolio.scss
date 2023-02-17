@@ -161,44 +161,46 @@
   }
 }
 
-.pagination-btn {
-  svg {
-    &:first-child {
-      right: 1.5vw;
-    }
-    &:nth-child(2) {
-      right: 2vw;
-      opacity: 0;
-    }
-    &:nth-child(3) {
-      right: 2.5vw;
-    }
-  }
-
-  &:hover {
+@include tablet {
+  .pagination-btn {
     svg {
       &:first-child {
-        right: 1vw;
+        right: 1.5vw;
       }
       &:nth-child(2) {
         right: 2vw;
-        opacity: 1;
+        opacity: 0;
       }
       &:nth-child(3) {
-        right: 3vw;
+        right: 2.5vw;
       }
     }
 
-    &:last-child svg {
-      &:first-child {
-        right: 0.8vw;
+    &:hover {
+      svg {
+        &:first-child {
+          right: 1vw;
+        }
+        &:nth-child(2) {
+          right: 2vw;
+          opacity: 1;
+        }
+        &:nth-child(3) {
+          right: 3vw;
+        }
       }
-      &:nth-child(2) {
-        right: 1.8vw;
-        opacity: 1;
-      }
-      &:nth-child(3) {
-        right: 2.8vw;
+
+      &:last-child svg {
+        &:first-child {
+          right: 0.8vw;
+        }
+        &:nth-child(2) {
+          right: 1.8vw;
+          opacity: 1;
+        }
+        &:nth-child(3) {
+          right: 2.8vw;
+        }
       }
     }
   }
@@ -247,6 +249,7 @@
       width: calc(100% - 3vw) !important;
       gap: 1.307vw;
       left: 50% !important;
+      bottom: 2vw !important;
 
       .swiper-pagination-bullet {
         height: 0.654vw;

@@ -94,9 +94,13 @@
   }
 
   &__text {
-    font-weight: 300;
-    font-size: 1.146vw;
-    line-height: 1.563vw;
+    display: flex;
+    flex-direction: column;
+    p {
+      font-weight: 300;
+      font-size: 1.146vw;
+      line-height: 1.563vw;
+    }
   }
 }
 
@@ -112,4 +116,103 @@
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@include tablet {
+  .portfolio-single {
+    padding-top: 12vw;
+  }
+
+  .portfolio-single {
+    &__top {
+      align-items: center;
+    }
+
+    &__top-title {
+      font-size: 3.66vw;
+      line-height: 4.379vw;
+      text-transform: none;
+      font-weight: 400;
+    }
+
+    &__wrapper {
+      padding: 2.614vw;
+      margin-bottom: 6.536vw;
+      border-radius: 1.307vw;
+    }
+
+    &__images {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 2.614vw;
+      height: auto;
+      margin-bottom: 2.604vw;
+    }
+
+    &__img {
+      border-radius: 1.307vw;
+      &:nth-child(1) {
+        height: 74.51vw;
+        grid-area: 1 / 1 / 4 / 3;
+      }
+
+      &:nth-child(2) {
+        height: 20.915vw;
+        grid-area: 4 / 1 / 5 / 2;
+      }
+
+      &:nth-child(3) {
+        height: 35.033vw;
+        grid-area: 5 / 1 / 7 / 2;
+      }
+
+      &:nth-child(4) {
+        height: 35.033vw;
+        grid-area: 4 / 2 / 6 / 3;
+      }
+
+      &:nth-child(5) {
+        height: 20.915vw;
+        grid-area: 6 / 2 / 7 / 3;
+      }
+    }
+
+    &__descr {
+      flex-direction: column;
+      gap: 3.922vw;
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 3.66vw;
+      line-height: 4.379vw;
+      margin-bottom: 2.614vw;
+    }
+
+    &__text {
+      gap: 2.614vw;
+      margin-bottom: 3.922vw;
+      p {
+        font-size: 2.353vw;
+        line-height: 3.399vw;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+
+  //recently
+  .recently {
+    margin-bottom: 8.333vw;
+  }
+  .recently-btns {
+    gap: 1.563vw;
+  }
+  .recently .products__top-descr {
+  }
 }

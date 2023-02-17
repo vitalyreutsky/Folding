@@ -2,6 +2,10 @@
   .products__top {
     margin-bottom: 1.7vw;
   }
+
+  .hero-swiper__bottom {
+    display: none;
+  }
 }
 
 .facts-items {
@@ -34,7 +38,7 @@
 
   &__small {
     position: absolute;
-    left: -0.5vw;
+    left: 0;
     bottom: 0;
     font-family: var(--font-family-Jost);
     font-weight: 300;
@@ -122,6 +126,10 @@
     }
     .products__top {
       margin-bottom: 5.621vw;
+    }
+
+    .hero-swiper__bottom {
+      display: flex;
     }
   }
 

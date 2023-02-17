@@ -334,7 +334,6 @@ const heroSwiper = new Swiper(".portfolio-swiper__img", {
 //!recently-swiper
 Swiper.use([Navigation, Pagination]);
 const recentlySwiper = new Swiper(".recently-swiper", {
-  slidesPerView: 3,
   slidesPerGroup: 1,
   spaceBetween: 20,
   speed: 1000,
@@ -343,6 +342,15 @@ const recentlySwiper = new Swiper(".recently-swiper", {
   navigation: {
     nextEl: document.querySelector(".recently-next"),
     prevEl: document.querySelector(".recently-prev"),
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    1200: {
+      slidesPerView: 3,
+    },
   },
 });
 
