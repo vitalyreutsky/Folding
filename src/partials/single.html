@@ -1,5 +1,5 @@
 <section class="single">
-  <div class="container single__container">
+  <div class="single__container">
     <div class="breadcrumbs">
       <ul class="breadcrumbs__list list-reset">
         <li class="breadcrumbs__item-back">
@@ -27,7 +27,7 @@
       </ul>
     </div>
 
-    <div class="single-product">
+    <div class="single-product container">
       <div class="single-product__slider">
         <div class="swiper single-swiper">
           <div class="swiper-wrapper single-wrapper">
@@ -239,7 +239,9 @@
         </div>
       </div>
       <div class="single-product__descr">
-        <h1 class="single-product__title">Раздвижная перегородка NORMA</h1>
+        <h1 class="single-product__title" data-da=".single-product,1200,first">
+          Раздвижная перегородка NORMA
+        </h1>
         <p class="single-product__text">
           Превратить одно большое пространство в два независимых помещения за
           считанные секунды - теперь это реально! Раздвижные перегородки NORMA
@@ -302,10 +304,10 @@
           </div>
         </div>
 
-        <div class="single-product__size size">
-          <p class="size__text">
-            Стоимость от <span class="size__old">280</span>
-            <span class="size__new">260</span> $/м2 без НДС
+        <div class="single-product__price-block price-block">
+          <p class="price-block__text">
+            Стоимость от <span class="price-block__old">280</span>
+            <span class="price-block__new">260</span> $/м2 без НДС
           </p>
         </div>
 
@@ -324,7 +326,7 @@
       </div>
     </div>
 
-    <div class="single-description description">
+    <div class="single-description description container">
       <div
         class="description-top"
         style="background-image: url('../img/single-description.png')"
@@ -392,7 +394,7 @@
       </div>
     </div>
 
-    <div class="characteristics-table">
+    <div class="characteristics-table container">
       <div class="products__top characteristics-table__top">
         <div class="products__top-descr characteristic__top-descr">
           <h2 class="title-page characteristics__top-title">
@@ -404,6 +406,7 @@
           class="btn btn-reset btn--primary works__top-btn"
           data-graph-path="main-modal"
           data-graph-animation="fadeInUp"
+          data-da=".characteristics-table,1200,last"
         >
           <svg>
             <use xlink:href="img/sprite.svg#bottom"></use>
@@ -418,14 +421,14 @@
         </button>
       </div>
 
-      <div class="table-content">
+      <div class="table-content" data-simplebar>
         <table class="table">
           <tbody>
             <tr>
               <th>Название</th>
               <th>Звукоизоляция, Дб</th>
               <th>Толщина, мм</th>
-              <th>Вес, кг/м²</th>
+              <th>Вес,кг/м²</th>
               <th>| ролик</th>
               <th>Стандарт, мм</th>
               <th>Макс, мм</th>
@@ -511,91 +514,93 @@
       </div>
     </div>
 
-    <div class="certificates">
+    <div class="certificates container">
       <h2 class="certificates-title title-page">Сертификаты и чертежи</h2>
-      <div class="certificates-wrapper">
-        <div class="certificates-item certificate">
-          <picture>
-            <source srcset="img/certificate.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="img/certificate.png"
-              class="image certificate-img"
-              alt="Certificate"
-            />
-          </picture>
-          <picture>
-            <source srcset="img/certificate-inner.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="img/certificate-inner.png"
-              class="image certificate-img__inner"
-              alt="Certificate"
-            />
-          </picture>
-        </div>
+      <div class="certificates-items swiper">
+        <div class="certificates-wrapper swiper-wrapper">
+          <div class="certificates-item certificate swiper-slide">
+            <picture>
+              <source srcset="img/certificate.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/certificate.png"
+                class="image certificate-img"
+                alt="Certificate"
+              />
+            </picture>
+            <picture>
+              <source srcset="img/certificate-inner.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/certificate-inner.png"
+                class="image certificate-img__inner"
+                alt="Certificate"
+              />
+            </picture>
+          </div>
 
-        <div class="certificates-item certificate">
-          <picture>
-            <source srcset="img/certificate.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="img/certificate.png"
-              class="image certificate-img"
-              alt="Certificate"
-            />
-          </picture>
-          <picture>
-            <source srcset="img/certificate-inner.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="img/certificate-inner.png"
-              class="image certificate-img__inner"
-              alt="Certificate"
-            />
-          </picture>
-        </div>
+          <div class="certificates-item certificate swiper-slide">
+            <picture>
+              <source srcset="img/certificate.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/certificate.png"
+                class="image certificate-img"
+                alt="Certificate"
+              />
+            </picture>
+            <picture>
+              <source srcset="img/certificate-inner.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/certificate-inner.png"
+                class="image certificate-img__inner"
+                alt="Certificate"
+              />
+            </picture>
+          </div>
 
-        <div class="certificates-item certificate">
-          <picture>
-            <source srcset="img/certificate.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="img/certificate.png"
-              class="image certificate-img"
-              alt="Certificate"
-            />
-          </picture>
-          <picture>
-            <source srcset="img/certificate-inner.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="img/certificate-inner.png"
-              class="image certificate-img__inner"
-              alt="Certificate"
-            />
-          </picture>
-        </div>
+          <div class="certificates-item certificate swiper-slide">
+            <picture>
+              <source srcset="img/certificate.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/certificate.png"
+                class="image certificate-img"
+                alt="Certificate"
+              />
+            </picture>
+            <picture>
+              <source srcset="img/certificate-inner.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/certificate-inner.png"
+                class="image certificate-img__inner"
+                alt="Certificate"
+              />
+            </picture>
+          </div>
 
-        <div class="certificates-item certificate">
-          <picture>
-            <source srcset="img/certificate.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="img/certificate.png"
-              class="image certificate-img"
-              alt="Certificate"
-            />
-          </picture>
-          <picture>
-            <source srcset="img/certificate-inner.webp" type="image/webp" />
-            <img
-              loading="lazy"
-              src="img/certificate-inner.png"
-              class="image certificate-img__inner"
-              alt="Certificate"
-            />
-          </picture>
+          <div class="certificates-item certificate swiper-slide">
+            <picture>
+              <source srcset="img/certificate.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/certificate.png"
+                class="image certificate-img"
+                alt="Certificate"
+              />
+            </picture>
+            <picture>
+              <source srcset="img/certificate-inner.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/certificate-inner.png"
+                class="image certificate-img__inner"
+                alt="Certificate"
+              />
+            </picture>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,9 @@
 .single {
   padding-top: 5.3vw;
+
+  .breadcrumbs {
+    padding-left: 3.906vw;
+  }
 }
 
 .single-product {
@@ -85,7 +89,6 @@
   border-radius: 10px;
   overflow: hidden;
   img {
-    display: block;
     width: 100%;
     height: 100%;
   }
@@ -167,9 +170,9 @@
       height: 1.563vw;
       fill: var(--gold-color);
     }
-    h3 {
+    h4 {
       font-weight: 400;
-      font-size: 1.146vw;
+      font-size: 1.1vw;
       line-height: 1.563vw;
     }
   }
@@ -220,8 +223,8 @@
     }
   }
 }
-//size
-.size {
+//price-block
+.price-block {
   padding: 0.5vw 0 1vw;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   &__text {
@@ -231,6 +234,7 @@
   }
 
   &__old {
+    text-decoration: line-through;
     font-weight: 300;
     font-size: 1.146vw;
     line-height: 1.458vw;
@@ -289,8 +293,9 @@
 
 table.table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
   border-spacing: 0;
+  border-radius: 10px;
   height: auto;
 }
 
@@ -347,14 +352,298 @@ table .table-choice--no {
 .certificate-img {
   height: calc(100% - 2vw);
   margin: 0 auto;
-  display: block;
   position: relative;
 }
 .certificate-img__inner {
   width: 100%;
   height: 10.521vw;
-  display: block;
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+@include tablet {
+  .single {
+    padding-top: 12vw;
+  }
+
+  .single-product {
+    flex-direction: column;
+    gap: 2.614vw;
+    margin-bottom: 7.843vw;
+    &__slider {
+      width: 100%;
+      height: auto;
+    }
+
+    &__title {
+      font-size: 3.66vw;
+      line-height: 4.379vw;
+      margin-bottom: 0;
+    }
+
+    &__text {
+      font-size: 2.353vw;
+      line-height: 3.399vw;
+      margin-bottom: 3.922vw;
+    }
+
+    &__btn {
+      width: 100%;
+      svg {
+        width: 2.353vw;
+        height: 2.745vw;
+        &:first-child {
+          right: 2vw;
+        }
+      }
+
+      &:hover {
+        svg {
+          &:first-child {
+            right: 2vw;
+          }
+        }
+      }
+    }
+  }
+
+  //swiper
+  .single-swiper {
+    height: 81.176vw;
+    margin-bottom: 2.614vw;
+    height: 100%;
+  }
+
+  .single-wrapper {
+    height: 100%;
+  }
+
+  .single-slide {
+    height: 100%;
+    border-radius: 1.307vw;
+  }
+
+  .single-swiper__zoom {
+    right: 1.961vw;
+    bottom: 1.961vw;
+    width: 5.882vw;
+    height: 5.882vw;
+  }
+
+  //swiper-mini
+  .single-mini {
+    height: 17vw;
+  }
+  .single-swiper__mini {
+    margin-right: 0;
+  }
+
+  .single-wrapper__mini {
+    height: 100%;
+  }
+
+  .single-slide__mini {
+    height: calc(100% - 1.5vw);
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  //active slide mini
+  .single-swiper__mini .swiper-slide-thumb-active {
+    &::after {
+      bottom: -1.5vw;
+      width: 100%;
+      height: 0.4vw;
+    }
+  }
+
+  .single-pagination {
+    display: none;
+    height: calc(100% - 0.5vw);
+  }
+
+  //guarantee
+  .guarantee {
+    padding: 3.922vw 0;
+    &__item {
+      gap: 1.1vw;
+      svg {
+        width: 3.922vw;
+        height: 3.922vw;
+      }
+      h4 {
+        font-size: 2.2vw;
+        line-height: 3.922vw;
+      }
+    }
+  }
+
+  //characteristic
+  .characteristics {
+    padding: 1.563vw 0 1.1vw;
+    gap: 2.222vw;
+  }
+
+  .characteristic {
+    gap: 1.307vw;
+    &__title {
+      font-size: 2.353vw;
+      line-height: 3.922vw;
+    }
+
+    &__list {
+      column-gap: 5.229vw;
+      row-gap: 1vw;
+    }
+
+    &__item {
+      font-size: 2.353vw;
+      line-height: 3.66vw;
+      padding-left: 1.7vw;
+      &::before {
+        width: 0.7vw;
+        height: 0.7vw;
+      }
+    }
+  }
+  //price-block
+  .price-block {
+    padding: 1.563vw 0;
+    &__text {
+      font-size: 2.353vw;
+      line-height: 3.922vw;
+    }
+
+    &__old {
+      font-size: 2.876vw;
+      line-height: 3.66vw;
+      padding: 0 1vw;
+    }
+
+    &__new {
+      font-size: 5.49vw;
+      line-height: 7.843vw;
+      padding-right: 1.5vw;
+    }
+  }
+
+  //description
+  .single-description.container {
+    max-width: 100%;
+  }
+
+  .description-top {
+    height: 53.333vw;
+  }
+  .description-title {
+    left: 4vw;
+    bottom: 13vw;
+  }
+
+  //characteristic-table
+  .characteristics-table {
+    margin-bottom: 7.843vw;
+
+    .btn {
+      width: calc(100% - 3.922vw);
+    }
+  }
+
+  .characteristics-table.container {
+    max-width: 100%;
+    padding-left: 3.922vw;
+  }
+
+  .characteristics-table__top {
+    max-width: 91.563vw;
+  }
+
+  .characteristics__top-title {
+    max-width: 100%;
+    font-size: 5.3vw;
+    line-height: 6.536vw;
+  }
+  .table-content {
+    max-width: 250vw;
+    margin-bottom: 5.229vw;
+    border-radius: 10px;
+    overflow: auto;
+  }
+
+  table.table {
+    margin-bottom: 2.604vw;
+  }
+
+  .simplebar-content-wrapper {
+    overflow: auto;
+  }
+
+  .simplebar-track.simplebar-horizontal {
+    width: calc(100% - 3.922vw);
+    height: 0.523vw;
+    margin-top: 2.614vw;
+    border-radius: 1.307vw;
+    background: #efefef;
+  }
+
+  .simplebar-scrollbar {
+    background-color: var(--gold-color);
+    height: 100%;
+  }
+  .simplebar-scrollbar::before {
+    background-color: var(--gold-color);
+    opacity: 1;
+  }
+
+  table.table td,
+  table.table th {
+    padding: 3.007vw 2.092vw;
+    min-height: 1.823vw;
+    height: 1.823vw;
+  }
+
+  table.table th {
+    font-size: 2.353vw;
+    line-height: 3.922vw;
+  }
+  table.table td {
+    font-size: 2.353vw;
+    line-height: 3.922vw;
+  }
+
+  //certificates
+  .certificates {
+    margin-bottom: 8.125vw;
+  }
+  .certificates-title {
+    margin-bottom: 3.922vw;
+  }
+
+  .certificates-items {
+    overflow: visible;
+  }
+
+  .certificates-wrapper {
+    display: flex;
+    grid-template-columns: auto;
+    gap: 0;
+  }
+
+  .certificate {
+    height: auto;
+    filter: drop-shadow(0px 4.04676px 16.187px rgba(0, 0, 0, 0.25));
+    border-radius: 1.046vw;
+    overflow: hidden;
+  }
+
+  .certificate-img {
+    width: 100%;
+    height: calc(100% - 2vw);
+  }
+  .certificate-img__inner {
+    display: none;
+    height: 10.521vw;
+  }
 }

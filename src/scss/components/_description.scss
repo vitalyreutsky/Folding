@@ -49,6 +49,42 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5vw;
-  &__item {
+}
+
+@include tablet {
+  .description-wrapper {
+    gap: 1.563vw;
+    top: -9vw;
+    max-width: 91.563vw;
+    padding: 5.229vw 2.614vw;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+  }
+  .description-item {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .description-left {
+    width: auto;
+    gap: 1.307vw;
+    span {
+      font-size: 2.876vw;
+      line-height: 3.922vw;
+    }
+    h4 {
+      font-size: 2.353vw;
+      line-height: 3.66vw;
+    }
+  }
+  .description-right {
+    gap: 2.614vw;
+    max-width: 52vw;
+  }
+  .description-text {
+    font-size: 2.353vw;
+    line-height: 3.399vw;
+  }
+  .description-list {
+    gap: 0.5vw;
   }
 }

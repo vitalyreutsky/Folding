@@ -1,7 +1,6 @@
 .feedback {
-  position: relative;
-  padding: 4.688vw 0 3.125vw;
-  background-color: var(--gold-color);
+  background: rgba(194, 143, 64, 1);
+
   &__container {
     display: flex;
     align-items: center;
@@ -9,6 +8,59 @@
     flex-direction: column;
     position: relative;
     z-index: 1;
+
+    animation-name: lines;
+    animation-duration: 13s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+
+    width: 100%;
+    height: 40.104vw;
+
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+      90deg,
+      rgba(194, 143, 64, 1) 0%,
+      rgba(194, 143, 64, 1) 16%,
+      rgba(212, 165, 84, 1) 16.1%,
+      rgba(194, 143, 64, 1) 16.2%,
+      rgba(194, 143, 64, 1) 32%,
+      rgba(212, 165, 84, 1) 32.1%,
+      rgba(194, 143, 64, 1) 32.2%,
+      rgba(194, 143, 64, 1) 49%,
+      rgba(212, 165, 84, 1) 49.1%,
+      rgba(194, 143, 64, 1) 49.2%,
+      rgba(194, 143, 64, 1) 65%,
+      rgba(212, 165, 84, 1) 65.1%,
+      rgba(194, 143, 64, 1) 65.2%,
+      rgba(194, 143, 64, 1) 83%,
+      rgba(212, 165, 84, 1) 83.1%,
+      rgba(194, 143, 64, 1) 83.2%,
+      rgba(194, 143, 64, 1) 100%
+    );
+  }
+}
+
+@keyframes lines {
+  0% {
+    background-size: 50%;
+    background-position: left;
+  }
+
+  50% {
+    background-size: 100%;
+    background-position: left;
+  }
+
+  50.1% {
+    background-size: 100%;
+    background-position: right;
+  }
+
+  100% {
+    background-size: 50%;
+    background-position: right;
   }
 }
 
@@ -73,115 +125,9 @@
   }
 }
 
-//lines
-.line {
-  position: absolute;
-  top: 0;
-  width: 0.052vw;
-  height: 100%;
-  background-color: var(--light-color);
-}
-
-//.line1 {
-//  left: 0;
-//  animation: line1 5s ease-out infinite alternate;
-//}
-
-//.line2 {
-//  left: 0;
-//  animation: line2 10s ease-in-out infinite alternate;
-//}
-
-//.line3 {
-//  left: 37%;
-//  animation: line3 1s ease-out infinite;
-//  animation-direction: alternate;
-//}
-
-//.line4 {
-//  left: 57%;
-//  animation: line4 1s ease-out infinite;
-//  animation-direction: alternate;
-//}
-
-//.line5 {
-//  left: 77%;
-//  animation: line5 1s ease-out infinite;
-//  animation-direction: alternate;
-//}
-
-@keyframes line1 {
-  0% {
-    left: -3%;
-  }
-
-  50% {
-    left: 60%;
-  }
-
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes line2 {
-  //0% {
-  //  left: 10%;
-  //}
-
-  //50% {
-  //  left: 67%;
-  //}
-
-  //100% {
-  //  left: 90%;
-  //}
-
-  //100% {
-  //  left: 17%;
-  //}
-}
-
-@keyframes line3 {
-  0% {
-    left: 37%;
-  }
-  100% {
-    left: 70%;
-  }
-
-  0% {
-    left: 37%;
-  }
-}
-
-@keyframes line4 {
-  0% {
-    left: 57%;
-  }
-  100% {
-    left: 80%;
-  }
-  0% {
-    left: 57%;
-  }
-}
-
-@keyframes line5 {
-  0% {
-    left: 77%;
-  }
-  100% {
-    left: 90%;
-  }
-  0% {
-    left: 77%;
-  }
-}
-
 @include tablet {
-  .feedback {
-    padding: 13.072vw 0;
+  .feedback__container {
+    height: 100.26vw;
   }
 
   .feedback-form {

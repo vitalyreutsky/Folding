@@ -13,7 +13,7 @@
 }
 
 .catalog-product__slider {
-  min-height: 20.833vw;
+  //min-height: 20.833vw;
   padding-left: calc((100% - 91.563vw) / 2);
   display: flex;
   justify-content: space-between;
@@ -63,6 +63,13 @@
     padding: 0.6vw 3vw 0.6vw 0.6vw;
     width: 11.563vw;
     height: 100%;
+    border-color: var(--text-black);
+
+    &::after {
+      width: 1px;
+      background-color: var(--text-black);
+    }
+
     span {
       font-size: 0.833vw;
     }
@@ -85,21 +92,19 @@
       }
     }
 
-    @include for-desktop {
-      &:hover {
-        svg {
-          &:first-child {
-            top: 23%;
-            right: 1.1vw;
-          }
-          &:nth-child(2) {
-            top: 38%;
-            right: 1.1vw;
-          }
-          &:nth-child(3) {
-            top: 53%;
-            right: 1.1vw;
-          }
+    &:hover {
+      svg {
+        &:first-child {
+          top: 23%;
+          right: 1.1vw;
+        }
+        &:nth-child(2) {
+          top: 38%;
+          right: 1.1vw;
+        }
+        &:nth-child(3) {
+          top: 53%;
+          right: 1.1vw;
         }
       }
     }
@@ -115,7 +120,7 @@
 .catalog-next {
   height: 100%;
   width: 2.292vw;
-  border-color: var(--gray-color);
+  border-color: var(--text-black);
 }
 
 .catalog-swiper {
@@ -190,6 +195,9 @@
     bottom: 0;
     width: 100%;
     h3 {
+      display: flex;
+      align-items: center;
+      min-height: 2vw;
       padding: 1.563vw;
       font-weight: 400;
       font-size: 0.938vw;
@@ -201,4 +209,174 @@
 
 .hide-swiper-btns {
   display: none !important;
+}
+
+@include tablet {
+  .catalog {
+    padding-top: 12vw;
+
+    .container {
+      max-width: 100%;
+    }
+
+    .breadcrumbs {
+      padding-left: calc((100% - 91.563vw) / 2);
+    }
+
+    &__title {
+      margin-bottom: 3.922vw;
+      padding-left: calc((100% - 91.563vw) / 2);
+    }
+  }
+
+  .catalog-products__sliders {
+    gap: 3.922vw;
+  }
+
+  .catalog-product__slider {
+    flex-direction: column-reverse;
+    min-height: auto;
+    padding-left: 0;
+    gap: 2.614vw;
+
+    &:not(:last-child) {
+      padding-bottom: 3.922vw;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .product-descr {
+    padding: 3.922vw;
+    width: 100%;
+    border-radius: 0;
+
+    &__title {
+      font-size: 3.66vw;
+      line-height: 4.379vw;
+      margin-bottom: 1.307vw;
+    }
+
+    &__text {
+      font-size: 2.353vw;
+      line-height: 3.529vw;
+      margin-bottom: 2.353vw;
+    }
+
+    &__bottom {
+      justify-content: space-between;
+      height: auto;
+      gap: 1.302vw;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 44.967vw;
+      height: 5.752vw;
+      padding: 1.5vw 9.302vw 1.5vw 3.125vw;
+      border-radius: 5px;
+      &::after {
+        right: 6.6vw;
+      }
+
+      span {
+        font-size: 2.353vw;
+        line-height: 2.745vw;
+      }
+
+      &::after {
+        width: 0.1px;
+      }
+
+      svg {
+        width: 1.699vw;
+        height: 1.699vw;
+        &:first-child {
+          right: 2.5vw;
+          top: 33%;
+        }
+        &:nth-child(2) {
+          top: 36%;
+        }
+        &:nth-child(3) {
+          right: 2.5vw;
+          top: 47%;
+        }
+      }
+
+      &:hover {
+        svg {
+          &:first-child {
+            top: 23%;
+            right: 2.5vw;
+          }
+          &:nth-child(2) {
+            top: 36%;
+            right: 2.5vw;
+          }
+          &:nth-child(3) {
+            top: 49%;
+            right: 2.5vw;
+          }
+        }
+      }
+    }
+  }
+
+  .catalog-prev,
+  .catalog-next {
+    width: 5.752vw;
+    height: 5.752vw;
+    border-radius: 0.654vw;
+    svg {
+      width: 1.699vw;
+      height: 1.699vw;
+
+      &:first-child {
+        right: 0.7vw;
+      }
+      &:nth-child(3) {
+        right: 1.5vw;
+      }
+    }
+  }
+
+  .catalog-swiper {
+    width: 100%;
+    padding-left: calc((100% - 91.563vw) / 2);
+    overflow: visible;
+    &::after {
+      right: -5vw;
+      width: 14.118vw;
+    }
+  }
+
+  .catalog-slide {
+    width: 41.83vw;
+    min-height: auto;
+    height: 48.366vw;
+    margin-right: 2.614vw;
+    border-radius: 1.307vw;
+
+    &__label {
+      top: 2vw;
+      left: 2vw;
+      padding: 0.3vw 2.5vw;
+      font-size: 2.353vw;
+      line-height: 3.922vw;
+      border-radius: 0.784vw;
+    }
+
+    &__name {
+      h3 {
+        display: flex;
+        align-items: center;
+        min-height: 8vw;
+        padding: 1vw 2.614vw;
+        font-size: 2.3vw;
+        line-height: 2.353vw;
+      }
+    }
+  }
 }

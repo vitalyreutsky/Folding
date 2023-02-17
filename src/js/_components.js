@@ -6,3 +6,4 @@ import "./components/table";
 import "./components/partner-animation";
 import "./components/burger";
 import "./components/dynamic-adapt";
+import "./components/custom-scroll";
