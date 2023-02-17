@@ -60,13 +60,15 @@
       }
     }
 
-    &:hover {
-      &::after {
-        background-color: var(--text-black);
-      }
-      svg {
-        &:first-child {
-          right: 1.1vw;
+    @include for-desktop {
+      &:hover {
+        &::after {
+          background-color: var(--text-black);
+        }
+        svg {
+          &:first-child {
+            right: 1.1vw;
+          }
         }
       }
     }
@@ -395,14 +397,6 @@ table .table-choice--no {
         height: 2.745vw;
         &:first-child {
           right: 2vw;
-        }
-      }
-
-      &:hover {
-        svg {
-          &:first-child {
-            right: 2vw;
-          }
         }
       }
     }

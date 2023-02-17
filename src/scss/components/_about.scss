@@ -182,6 +182,7 @@
   backdrop-filter: blur(5px);
   transition: all 0.35s ease-in;
   z-index: 1;
+  overflow: hidden;
 }
 
 .benefits-title {
@@ -244,6 +245,7 @@
 
     .description-top__img {
       height: 13.333vw;
+      width: 16.993vw;
     }
     .description-top {
       gap: 2.614vw;
@@ -345,6 +347,7 @@
   }
 
   .benefits-item--active .benefits-item {
+    overflow: hidden;
     img {
       transform: scale(1.2) !important;
     }

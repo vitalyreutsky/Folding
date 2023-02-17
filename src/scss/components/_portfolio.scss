@@ -122,28 +122,30 @@
     }
   }
 
-  &:hover {
-    svg {
-      &:first-child {
-        right: 1.3vw;
+  @include for-desktop {
+    &:hover {
+      svg {
+        &:first-child {
+          right: 1.3vw;
+        }
+        &:nth-child(2) {
+          right: 0.9vw;
+        }
+        &:nth-child(3) {
+          right: 0.5vw;
+        }
       }
-      &:nth-child(2) {
-        right: 0.9vw;
-      }
-      &:nth-child(3) {
-        right: 0.5vw;
-      }
-    }
 
-    &:last-child svg {
-      &:first-child {
-        right: 1.3vw;
-      }
-      &:nth-child(2) {
-        right: 0.9vw;
-      }
-      &:nth-child(3) {
-        right: 0.5vw;
+      &:last-child svg {
+        &:first-child {
+          right: 1.3vw;
+        }
+        &:nth-child(2) {
+          right: 0.9vw;
+        }
+        &:nth-child(3) {
+          right: 0.5vw;
+        }
       }
     }
   }
@@ -176,30 +178,32 @@
       }
     }
 
-    &:hover {
-      svg {
-        &:first-child {
-          right: 1vw;
+    @include for-desktop {
+      &:hover {
+        svg {
+          &:first-child {
+            right: 1vw;
+          }
+          &:nth-child(2) {
+            right: 2vw;
+            opacity: 1;
+          }
+          &:nth-child(3) {
+            right: 3vw;
+          }
         }
-        &:nth-child(2) {
-          right: 2vw;
-          opacity: 1;
-        }
-        &:nth-child(3) {
-          right: 3vw;
-        }
-      }
 
-      &:last-child svg {
-        &:first-child {
-          right: 0.8vw;
-        }
-        &:nth-child(2) {
-          right: 1.8vw;
-          opacity: 1;
-        }
-        &:nth-child(3) {
-          right: 2.8vw;
+        &:last-child svg {
+          &:first-child {
+            right: 0.8vw;
+          }
+          &:nth-child(2) {
+            right: 1.8vw;
+            opacity: 1;
+          }
+          &:nth-child(3) {
+            right: 2.8vw;
+          }
         }
       }
     }
@@ -282,32 +286,6 @@
         right: 0.7vw;
       }
     }
-
-    &:hover {
-      svg {
-        &:first-child {
-          right: 1.3vw;
-        }
-        &:nth-child(2) {
-          right: 0.9vw;
-        }
-        &:nth-child(3) {
-          right: 0.5vw;
-        }
-      }
-
-      &:last-child svg {
-        &:first-child {
-          right: 1.3vw;
-        }
-        &:nth-child(2) {
-          right: 0.9vw;
-        }
-        &:nth-child(3) {
-          right: 0.5vw;
-        }
-      }
-    }
   }
   .pagination-item {
     font-size: 3.922vw;
@@ -325,34 +303,6 @@
       }
       &:nth-child(3) {
         right: 2.5vw;
-      }
-    }
-
-    &:hover {
-      svg {
-        &:first-child {
-          right: 1vw;
-        }
-        &:nth-child(2) {
-          right: 2vw;
-          opacity: 1;
-        }
-        &:nth-child(3) {
-          right: 3vw;
-        }
-      }
-
-      &:last-child svg {
-        &:first-child {
-          right: 0.8vw;
-        }
-        &:nth-child(2) {
-          right: 1.8vw;
-          opacity: 1;
-        }
-        &:nth-child(3) {
-          right: 2.8vw;
-        }
       }
     }
   }

@@ -153,22 +153,5 @@
         top: 47%;
       }
     }
-
-    &:hover {
-      svg {
-        &:first-child {
-          top: 23%;
-          right: 2.5vw;
-        }
-        &:nth-child(2) {
-          top: 36%;
-          right: 2.5vw;
-        }
-        &:nth-child(3) {
-          top: 49%;
-          right: 2.5vw;
-        }
-      }
-    }
   }
 }
