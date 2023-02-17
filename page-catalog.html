@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Folding</title>
+  <!--<link
+    rel="preload"
+    href="fonts/GillSans-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />-->
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <div class="graph-modal modal">
+  <div
+    class="graph-modal__container modal-container modal-main"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="main-modal"
+  >
+    <button
+      class="btn-reset js-modal-close graph-modal__close"
+      aria-label="Закрыть модальное окно"
+    ></button>
+    <div class="graph-modal__content modal-content">
+      <div class="modal-form feedback-form">
+        <h2 class="title-page feedback-title modal-title">обратный звонок</h2>
+        <p class="text-page feedback-text modal-text">
+          Оставьте заявку и наш менеджер перезвонит вам в течение 15 минут
+        </p>
+        <form class="form">
+          <label class="form__label">
+            <svg>
+              <use xlink:href="img/sprite.svg#user"></use>
+            </svg>
+            <input
+              class="input-reset form__input form__input--name"
+              placeholder="Ваше имя"
+            />
+          </label>
+          <label class="form__label">
+            <svg>
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <input
+              class="input-reset form__input form__input--phone"
+              placeholder="Ваш номер"
+            />
+          </label>
+          <label class="form__label">
+            <svg>
+              <use xlink:href="img/sprite.svg#mail"></use>
+            </svg>
+            <input
+              class="input-reset form__input form__input--mail"
+              placeholder="E-mail"
+            />
+          </label>
+          <button class="form__btn btn btn-reset btn--primary modal-btn">
+            <svg>
+              <use xlink:href="img/sprite.svg#bottom"></use>
+            </svg>
+            <svg>
+              <use xlink:href="img/sprite.svg#bottom"></use>
+            </svg>
+            <svg>
+              <use xlink:href="img/sprite.svg#bottom"></use>
+            </svg>
+            <span>Отправить</span>
+          </button>
+          <label class="custom-checkbox modal-checkbox">
+            <input checked type="checkbox" class="custom-checkbox__field" />
+
+            <span class="custom-checkbox__content"
+              >Нажимая «отправить» я даю согласие на обработку персональных
+              данных</span
+            >
+          </label>
+        </form>
+      </div>
+      <div class="modal-img">
+        <picture>
+          <source srcset="img/modal1.webp" type="image/webp" />
+          <img loading="lazy" src="img/modal1.png" class="image" alt="Modal" />
+        </picture>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="graph-modal__container modal-container modal-discount"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal-present"
+  >
+    <button
+      class="btn-reset js-modal-close graph-modal__close"
+      aria-label="Закрыть модальное окно"
+    ></button>
+    <div class="graph-modal__content modal-content">
+      <div class="modal-img">
+        <picture>
+          <source srcset="img/discount.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/discount.png"
+            class="image"
+            alt="Modal"
+          />
+        </picture>
+      </div>
+      <div class="modal-form feedback-form">
+        <h2
+          class="title-page feedback-title modal-title"
+          data-da=".modal-discount,1200,0"
+        >
+          Оставь заявку и получи <span>скидку 10%</span>
+        </h2>
+        <form class="form">
+          <label class="form__label">
+            <svg>
+              <use xlink:href="img/sprite.svg#user"></use>
+            </svg>
+            <input
+              class="input-reset form__input form__input--name"
+              placeholder="Ваше имя"
+            />
+          </label>
+          <label class="form__label">
+            <svg>
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <input
+              class="input-reset form__input form__input--phone"
+              placeholder="Ваш номер"
+            />
+          </label>
+          <label class="form__label">
+            <svg>
+              <use xlink:href="img/sprite.svg#mail"></use>
+            </svg>
+            <input
+              class="input-reset form__input form__input--mail"
+              placeholder="E-mail"
+            />
+          </label>
+          <button class="form__btn btn btn-reset btn--primary modal-btn">
+            <svg>
+              <use xlink:href="img/sprite.svg#bottom"></use>
+            </svg>
+            <svg>
+              <use xlink:href="img/sprite.svg#bottom"></use>
+            </svg>
+            <svg>
+              <use xlink:href="img/sprite.svg#bottom"></use>
+            </svg>
+            <span>Отправить</span>
+          </button>
+          <label class="custom-checkbox modal-checkbox">
+            <input checked type="checkbox" class="custom-checkbox__field" />
+
+            <span class="custom-checkbox__content"
+              >Нажимая «отправить» я даю согласие на обработку персональных
+              данных</span
+            >
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+ <header class="header fix-block">
+  <div class="container header__container">
+    <button
+      class="burger"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      data-burger
+    >
+      <span class="burger__line"></span>
+    </button>
+
+    <div class="menu">
+      <div class="menu__wrapper" data-menu>
+        <div class="menu__top">
+          <a href="index.html" class="menu__logo">
+            <picture>
+              <source srcset="img/logo.webp" type="image/webp" />
+              <img loading="lazy" src="img/logo.png" class="image" alt="Logo" />
+            </picture>
+          </a>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Главная</a>
+            </li>
+            <li class="nav__item nav__item--sub">
+              <a href="#" class="nav__link">
+                О нас
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+              </a>
+              <div class="sub-menu">
+                <ul class="sub-menu__list list-reset">
+                  <li class="sub-menu__item" data-da=".nav__list,1200,2">
+                    <a href="page-about.html" class="sub-menu__link nav__link"
+                      >О компании</a
+                    >
+                  </li>
+
+                  <li class="sub-menu__item" data-da=".nav__list,1200,3">
+                    <a
+                      href="page-portfolio.html"
+                      class="sub-menu__link nav__link"
+                      >Портфолио</a
+                    >
+                  </li>
+
+                  <li class="sub-menu__item" data-da=".nav__list,1200,4">
+                    <a href="page-process.html" class="sub-menu__link nav__link"
+                      >Как мы работаем</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="page-catalog.html" class="nav__link">Наша продукция</a>
+            </li>
+            <li class="nav__item">
+              <a href="page-price.html" class="nav__link">Стоимость</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__form">
+          <div class="feedback-form">
+            <h2 class="title-page feedback-title modal-title">
+              Обратный звонок
+            </h2>
+            <p class="text-page feedback-text modal-text">
+              Оставьте заявку и наш менеджер перезвонит вам в течение 15 минут
+            </p>
+            <form class="form">
+              <label class="form__label">
+                <svg>
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+                <input
+                  class="input-reset form__input form__input--name"
+                  placeholder="Ваше имя"
+                />
+              </label>
+              <label class="form__label">
+                <svg>
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                <input
+                  class="input-reset form__input form__input--phone"
+                  placeholder="Ваш номер"
+                />
+              </label>
+
+              <button class="form__btn btn btn-reset btn--primary modal-btn">
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <span>Отправить</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="header__logo">
+      <picture>
+        <source srcset="img/logo.webp" type="image/webp" />
+        <img loading="lazy" src="img/logo.png" class="image" alt="Logo" />
+      </picture>
+    </a>
+
+    <nav class="nav nav-right">
+      <ul class="nav__list list-reset">
+        <li class="nav__item" data-da=".nav__list,1200,last">
+          <a href="page-contacts.html" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      class="header__btn btn btn-reset"
+      data-graph-path="main-modal"
+      data-graph-animation="fadeInUp"
+    >
+      <svg>
+        <use xlink:href="img/sprite.svg#phone"></use>
+      </svg>
+      <span>Оставить заявку</span>
+    </button>
+
+    <ul class="header__lang lang list-reset" id="top-lang">
+      <li class="pll-parent-menu-item lang__item-active lang__item">
+        <a class="lang-item lang-item--el" href="#switcher">ru</a>
+        <div class="lang-icon">
+          <svg>
+            <use xlink:href="img/sprite.svg#bottom"></use>
+          </svg>
+          <svg>
+            <use xlink:href="img/sprite.svg#bottom"></use>
+          </svg>
+        </div>
+        <ul class="lang__sub-menu list-reset" data-da=".menu__wrapper,1200,2">
+          <li class="lang-item lang-item-9 lang-item-ge">
+            <a lang="ka-GE" hreflang="ka-GE" href="#">ru</a>
+          </li>
+          <li class="lang-item lang-item-9 lang-item-ge">
+            <a lang="ka-GE" hreflang="ka-GE" href="#">ge</a>
+          </li>
+          <li class="lang-item lang-item-5 lang-item-en lang-item-first">
+            <a lang="en-US" hreflang="en-US" href="#">en</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+
+      <main class="main">
+        <section class="catalog main-offset">
+  <div class="catalog__container container">
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list list-reset">
+        <li class="breadcrumbs__item-back">
+          <a href="index.html" class="breadcrumbs__link breadcrumbs__link-back">
+            <svg>
+              <use xlink:href="img/sprite.svg#back"></use>
+            </svg>
+            Назад
+          </a>
+        </li>
+
+        <li class="breadcrumbs__item breadcrumbs__item-main">
+          <a href="products-page.html" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item-main">
+          <a
+            href="products-page.html"
+            class="breadcrumbs__link breadcrumbs__link--active"
+            >Каталог</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <h1 class="title-page catalog__title">Наша продукция</h1>
+
+    <div class="catalog-products__sliders">
+      <div class="catalog-product__slider">
+        <div class="product-descr">
+          <div class="product-descr__name">
+            <h2 class="product-descr__title">Раздвижные стены</h2>
+            <p class="product-descr__text">
+              Раздвижная стена NORMA отличается высоким уровнем звукоизоляции и
+              большим количеством паркингов. Стены представляют собой отдельные
+              панели, передвигающиеся по потолочному треку
+            </p>
+            <div class="product-descr__bottom">
+              <a
+                href="http://axiomabio.com/pdf/test.pdf"
+                target="_blank"
+                download
+                class="btn btn-reset btn--primary assortment-btn product-descr__btn"
+              >
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <span>Скачать буклет</span>
+              </a>
+
+              <div class="hero-swiper__pagination slider-btns catalog-btns">
+                <button class="catalog-prev btn-reset btn--small">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                </button>
+                <button class="catalog-next btn-reset btn--small">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper catalog-swiper">
+          <div class="swiper-wrapper catalog-swiper__wrapper">
+            <a href="page-single.html" class="swiper-slide catalog-slide">
+              <div class="catalog-slide__item">
+                <span class="catalog-slide__label">Хит продаж</span>
+                <div class="catalog-slide__image">
+                  <picture>
+                    <source
+                      srcset="img/catalog/catalog1.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/catalog/catalog1.png"
+                      class="image"
+                      alt="Product"
+                    />
+                  </picture>
+                </div>
+                <div class="catalog-slide__name">
+                  <h3>Раздвижная стена NORMA</h3>
+                </div>
+              </div>
+            </a>
+
+            <a href="page-single.html" class="swiper-slide catalog-slide">
+              <div class="catalog-slide__item">
+                <div class="catalog-slide__image">
+                  <picture>
+                    <source
+                      srcset="img/catalog/catalog2.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/catalog/catalog2.png"
+                      class="image"
+                      alt="Product"
+                    />
+                  </picture>
+                </div>
+                <div class="catalog-slide__name">
+                  <h3>Раздвижная стена NORMA 80</h3>
+                </div>
+              </div>
+            </a>
+
+            <a href="page-single.html" class="swiper-slide catalog-slide">
+              <div class="catalog-slide__item">
+                <div class="catalog-slide__image">
+                  <picture>
+                    <source
+                      srcset="img/catalog/catalog3.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/catalog/catalog3.png"
+                      class="image"
+                      alt="Product"
+                    />
+                  </picture>
+                </div>
+                <div class="catalog-slide__name">
+                  <h3>Раздвижная стена Разборная НОРМА 100</h3>
+                </div>
+              </div>
+            </a>
+
+            <a href="page-single.html" class="swiper-slide catalog-slide">
+              <div class="catalog-slide__item">
+                <div class="catalog-slide__image">
+                  <picture>
+                    <source
+                      srcset="img/catalog/catalog4.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/catalog/catalog4.png"
+                      class="image"
+                      alt="Product"
+                    />
+                  </picture>
+                </div>
+                <div class="catalog-slide__name">
+                  <h3>Раздвижная стена PARTHOS</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog-product__slider">
+        <div class="product-descr">
+          <div class="product-descr__name">
+            <h2 class="product-descr__title">Раздвижные перегородки</h2>
+            <p class="product-descr__text">
+              Раздвижные перегородки NORMA состоят из скрепленных петлями
+              панелей, перемещающихся по прямой линии. Тонкие и легкие
+              конструкции раскрываются за считанные секунды и имеют бесплатную
+              дверь.
+            </p>
+            <div class="product-descr__bottom">
+              <a
+                href="http://axiomabio.com/pdf/test.pdf"
+                target="_blank"
+                download
+                class="btn btn-reset btn--primary assortment-btn product-descr__btn"
+              >
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <span>Скачать буклет</span>
+              </a>
+
+              <div class="hero-swiper__pagination slider-btns catalog-btns">
+                <button class="catalog-prev btn-reset btn--small">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                </button>
+                <button class="catalog-next btn-reset btn--small">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper catalog-swiper">
+          <div class="swiper-wrapper catalog-swiper__wrapper">
+            <a href="page-single.html" class="swiper-slide catalog-slide">
+              <div class="catalog-slide__item">
+                <span class="catalog-slide__label">Новинка</span>
+                <div class="catalog-slide__image">
+                  <picture>
+                    <source
+                      srcset="img/catalog/catalog5.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/catalog/catalog5.png"
+                      class="image"
+                      alt="Product"
+                    />
+                  </picture>
+                </div>
+                <div class="catalog-slide__name">
+                  <h3>Раздвижная перегородка NORMA</h3>
+                </div>
+              </div>
+            </a>
+
+            <a href="page-single.html" class="swiper-slide catalog-slide">
+              <div class="catalog-slide__item">
+                <div class="catalog-slide__image">
+                  <picture>
+                    <source
+                      srcset="img/catalog/catalog6.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/catalog/catalog6.png"
+                      class="image"
+                      alt="Product"
+                    />
+                  </picture>
+                </div>
+                <div class="catalog-slide__name">
+                  <h3>
+                    Раздвижная перегородка NORMA с напольно-потолочным
+                    креплением
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog-product__slider">
+        <div class="product-descr">
+          <div class="product-descr__name">
+            <h2 class="product-descr__title">Двери звукоизоляционные</h2>
+            <p class="product-descr__text">
+              Звукоизоляционная дверь NORMA — это уникальная противопожарная
+              конструкция, не пропускающая звуки и запахи. Подходит как для
+              коммерческих, так и для жилых помещений.
+            </p>
+            <div class="product-descr__bottom">
+              <a
+                href="http://axiomabio.com/pdf/test.pdf"
+                target="_blank"
+                download
+                class="btn btn-reset btn--primary assortment-btn product-descr__btn"
+              >
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <span>Скачать буклет</span>
+              </a>
+
+              <div class="hero-swiper__pagination slider-btns catalog-btns">
+                <button class="catalog-prev btn-reset btn--small">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                </button>
+                <button class="catalog-next btn-reset btn--small">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper catalog-swiper">
+          <div class="swiper-wrapper catalog-swiper__wrapper">
+            <a href="page-single.html" class="swiper-slide catalog-slide">
+              <div class="catalog-slide__item">
+                <span class="catalog-slide__label">Акция</span>
+                <div class="catalog-slide__image">
+                  <picture>
+                    <source
+                      srcset="img/catalog/catalog7.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/catalog/catalog7.png"
+                      class="image"
+                      alt="Product"
+                    />
+                  </picture>
+                </div>
+                <div class="catalog-slide__name">
+                  <h3>Дверь НОРМА звукоизоляционная</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog-product__slider">
+        <div class="product-descr">
+          <div class="product-descr__name">
+            <h2 class="product-descr__title">Интерьерные панели</h2>
+            <p class="product-descr__text">
+              Интерьерные панели NORMA — это идеальное решение для учебных
+              пространств, офисов, детских и общественных учреждений. Панели
+              изготавливаются из ЛДСП или негорючего СМЛ
+            </p>
+            <div class="product-descr__bottom">
+              <a
+                href="http://axiomabio.com/pdf/test.pdf"
+                target="_blank"
+                download
+                class="btn btn-reset btn--primary assortment-btn product-descr__btn"
+              >
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprite.svg#bottom"></use>
+                </svg>
+                <span>Скачать буклет</span>
+              </a>
+
+              <div class="hero-swiper__pagination slider-btns catalog-btns">
+                <button class="catalog-prev btn-reset btn--small">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                </button>
+                <button class="catalog-next btn-reset btn--small">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bottom"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper catalog-swiper">
+          <div class="swiper-wrapper catalog-swiper__wrapper">
+            <a href="page-single.html" class="swiper-slide catalog-slide">
+              <div class="catalog-slide__item">
+                <span class="catalog-slide__label">Хит продаж</span>
+                <div class="catalog-slide__image">
+                  <picture>
+                    <source
+                      srcset="img/catalog/catalog8.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/catalog/catalog8.png"
+                      class="image"
+                      alt="Product"
+                    />
+                  </picture>
+                </div>
+                <div class="catalog-slide__name">
+                  <h3>Акустические панели NORMA</h3>
+                </div>
+              </div>
+            </a>
+
+            <a href="page-single.html" class="swiper-slide catalog-slide">
+              <div class="catalog-slide__item">
+                <div class="catalog-slide__image">
+                  <picture>
+                    <source
+                      srcset="img/catalog/catalog9.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/catalog/catalog9.png"
+                      class="image"
+                      alt="Product"
+                    />
+                  </picture>
+                </div>
+                <div class="catalog-slide__name">
+                  <h3>Магнитно-маркерные панели NORMA</h3>
+                </div>
+              </div>
+            </a>
+
+            <a href="page-single.html" class="swiper-slide catalog-slide">
+              <div class="catalog-slide__item">
+                <div class="catalog-slide__image">
+                  <picture>
+                    <source
+                      srcset="img/catalog/catalog8.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="img/catalog/catalog8.png"
+                      class="image"
+                      alt="Product"
+                    />
+                  </picture>
+                </div>
+                <div class="catalog-slide__name">
+                  <h3>Шумопоглощающие островки NORMA</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="feedback">
+  <div class="feedback__container">
+    <div class="feedback-form container">
+      <h2 class="title-page feedback-title">Мы всегда на связи</h2>
+      <p class="text-page feedback-text">
+        Оставьте свои данные и мы свяжемся с вами любым удобным для вас способом
+      </p>
+      <form class="form">
+        <label class="form__label">
+          <svg>
+            <use xlink:href="img/sprite.svg#user"></use>
+          </svg>
+          <input
+            class="input-reset form__input form__input--name"
+            placeholder="Ваше имя"
+          />
+        </label>
+        <label class="form__label">
+          <svg>
+            <use xlink:href="img/sprite.svg#phone"></use>
+          </svg>
+          <input
+            class="input-reset form__input form__input--phone"
+            placeholder="Ваш номер"
+          />
+        </label>
+        <label class="form__label">
+          <svg>
+            <use xlink:href="img/sprite.svg#mail"></use>
+          </svg>
+          <input
+            class="input-reset form__input form__input--mail"
+            placeholder="E-mail"
+          />
+        </label>
+        <button class="form__btn btn btn-reset btn--primary works__top-btn">
+          <svg>
+            <use xlink:href="img/sprite.svg#bottom"></use>
+          </svg>
+          <svg>
+            <use xlink:href="img/sprite.svg#bottom"></use>
+          </svg>
+          <svg>
+            <use xlink:href="img/sprite.svg#bottom"></use>
+          </svg>
+          <span>Отправить</span>
+        </button>
+        <label class="custom-checkbox">
+          <input checked type="checkbox" class="custom-checkbox__field" />
+
+          <span class="custom-checkbox__content"
+            >Нажимая «отправить» я даю согласие на обработку персональных
+            данных</span
+          >
+        </label>
+      </form>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="footer__container">
+    <div class="footer-descr">
+      <picture>
+        <source srcset="img/logo2.webp" type="image/webp" />
+        <img
+          loading="lazy"
+          src="img/logo2.png"
+          class="image footer-descr__logo"
+          alt="Logo"
+        />
+      </picture>
+      <button
+        class="btn btn-reset btn--primary footer-descr__btn"
+        data-graph-path="main-modal"
+        data-graph-animation="fadeInUp"
+      >
+        <svg>
+          <use xlink:href="img/sprite.svg#bottom"></use>
+        </svg>
+        <svg>
+          <use xlink:href="img/sprite.svg#bottom"></use>
+        </svg>
+        <svg>
+          <use xlink:href="img/sprite.svg#bottom"></use>
+        </svg>
+        <span>Оставить заявку</span>
+      </button>
+      <div class="footer-descr__items">
+        <h2 class="footer-descr__title">Контакты:</h2>
+        <div class="footer-descr__item">
+          <span class="footer-descr__phone">тел: +7 495 085-05-80</span>
+          <span class="footer-descr__city">Москва</span>
+        </div>
+
+        <div class="footer-descr__item">
+          <span class="footer-descr__phone">тел: +7 (812) 604-60-51</span>
+          <span class="footer-descr__city">Санкт-Петербург</span>
+        </div>
+      </div>
+
+      <div class="footer-descr__copyright">
+        © «Компания „ФОЛДИН“ раздвижные перегородки», 2003-2022
+      </div>
+    </div>
+
+    <nav class="footer-nav">
+      <ul class="footer-nav__list list-reset">
+        <li class="footer-nav__item">
+          <a href="index.html" class="footer-nav__link">Главная</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="page-catalog.html" class="footer-nav__link">Продукция</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="page-price.html" class="footer-nav__link">Стоимость</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="page-about.html" class="footer-nav__link">О нас</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="page-portfolio.html" class="footer-nav__link">Портфолио</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="page-process.html" class="footer-nav__link"
+            >Как мы работаем</a
+          >
+        </li>
+        <li class="footer-nav__item">
+          <a href="page-contacts.html" class="footer-nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer-map map">
+      <a href="#" class="map-img">
+        <picture>
+          <source srcset="img/map.webp" type="image/webp" />
+          <img loading="lazy" src="img/map.png" class="image" alt="Map" />
+        </picture>
+
+        <div class="map-marker">
+          <img loading="lazy" src="img/marker.png" class="image" alt="Marker" />
+        </div>
+      </a>
+    </div>
+
+    <div class="map footer-map--mob">
+      <a href="#" class="map-img">
+        <picture>
+          <source srcset="img/contacts.webp" type="image/webp" />
+          <img loading="lazy" src="img/contacts.png" class="image" alt="Map" />
+        </picture>
+
+        <div class="map-marker">
+          <img loading="lazy" src="img/marker.png" class="image" alt="Marker" />
+        </div>
+      </a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>
