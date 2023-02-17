@@ -449,26 +449,28 @@ a {
   -ms-transform: translate(-50%, -50%) rotate(-90deg);
   transform: translate(-50%, -50%) rotate(-90deg);
 }
-.btn--tertiary:hover {
-  color: var(--text-black);
-  background-color: var(--gold-color);
-  border: 1px solid var(--text-black);
-}
-.btn--tertiary:hover::after {
-  background-color: var(--text-black);
-}
-.btn--tertiary:hover svg {
-  fill: var(--text-black);
-}
-.btn--tertiary:hover svg:first-child {
-  right: 0.2vw;
-}
-.btn--tertiary:hover svg:nth-child(2) {
-  right: 0.7vw;
-  opacity: 1;
-}
-.btn--tertiary:hover svg:nth-child(3) {
-  right: 1.2vw;
+@media (min-width: 1200px) {
+  .btn--tertiary:hover {
+    color: var(--text-black);
+    background-color: var(--gold-color);
+    border: 1px solid var(--text-black);
+  }
+  .btn--tertiary:hover::after {
+    background-color: var(--text-black);
+  }
+  .btn--tertiary:hover svg {
+    fill: var(--text-black);
+  }
+  .btn--tertiary:hover svg:first-child {
+    right: 0.2vw;
+  }
+  .btn--tertiary:hover svg:nth-child(2) {
+    right: 0.7vw;
+    opacity: 1;
+  }
+  .btn--tertiary:hover svg:nth-child(3) {
+    right: 1.2vw;
+  }
 }
 
 .btn--small {
@@ -573,16 +575,6 @@ a {
   }
   .btn--primary svg:nth-child(3) {
     right: 2.7vw;
-  }
-  .btn--primary:hover svg:first-child {
-    right: 1.5vw;
-  }
-  .btn--primary:hover svg:nth-child(2) {
-    right: 2.5vw;
-    opacity: 1;
-  }
-  .btn--primary:hover svg:nth-child(3) {
-    right: 3.5vw;
   }
   .btn--small {
     width: 7.843vw;
@@ -2538,18 +2530,6 @@ a {
     right: 2.5vw;
     top: 47%;
   }
-  .assortment-btn:hover svg:first-child {
-    top: 23%;
-    right: 2.5vw;
-  }
-  .assortment-btn:hover svg:nth-child(2) {
-    top: 36%;
-    right: 2.5vw;
-  }
-  .assortment-btn:hover svg:nth-child(3) {
-    top: 49%;
-    right: 2.5vw;
-  }
 }
 .feedback {
   background: rgb(194, 143, 64);
@@ -2758,6 +2738,9 @@ a {
 @media only screen and (max-width: 1200px) {
   .feedback__container {
     height: 100.26vw;
+    background-image: none;
+    -webkit-animation: none;
+    animation: none;
   }
   .feedback-form {
     width: 100%;
@@ -2938,17 +2921,19 @@ a {
   right: 1.1vw;
   top: 45%;
 }
-.product-descr__btn:hover svg:first-child {
-  top: 23%;
-  right: 1.1vw;
-}
-.product-descr__btn:hover svg:nth-child(2) {
-  top: 38%;
-  right: 1.1vw;
-}
-.product-descr__btn:hover svg:nth-child(3) {
-  top: 53%;
-  right: 1.1vw;
+@media (min-width: 1200px) {
+  .product-descr__btn:hover svg:first-child {
+    top: 23%;
+    right: 1.1vw;
+  }
+  .product-descr__btn:hover svg:nth-child(2) {
+    top: 38%;
+    right: 1.1vw;
+  }
+  .product-descr__btn:hover svg:nth-child(3) {
+    top: 53%;
+    right: 1.1vw;
+  }
 }
 
 .catalog-btns {
@@ -3144,18 +3129,6 @@ a {
     right: 2.5vw;
     top: 47%;
   }
-  .product-descr__btn:hover svg:first-child {
-    top: 23%;
-    right: 2.5vw;
-  }
-  .product-descr__btn:hover svg:nth-child(2) {
-    top: 36%;
-    right: 2.5vw;
-  }
-  .product-descr__btn:hover svg:nth-child(3) {
-    top: 49%;
-    right: 2.5vw;
-  }
   .catalog-prev,
   .catalog-next {
     width: 5.752vw;
@@ -3279,11 +3252,13 @@ a {
     background-color: var(--text-black);
   }
 }
-.single-product__btn:hover::after {
-  background-color: var(--text-black);
-}
-.single-product__btn:hover svg:first-child {
-  right: 1.1vw;
+@media (min-width: 1200px) {
+  .single-product__btn:hover::after {
+    background-color: var(--text-black);
+  }
+  .single-product__btn:hover svg:first-child {
+    right: 1.1vw;
+  }
 }
 
 .single-swiper {
@@ -3650,9 +3625,6 @@ table .table-choice--no {
     height: 2.745vw;
   }
   .single-product__btn svg:first-child {
-    right: 2vw;
-  }
-  .single-product__btn:hover svg:first-child {
     right: 2vw;
   }
   .single-swiper {
@@ -4115,23 +4087,25 @@ table .table-choice--no {
 .pagination-btn svg:nth-child(3) {
   right: 0.7vw;
 }
-.pagination-btn:hover svg:first-child {
-  right: 1.3vw;
-}
-.pagination-btn:hover svg:nth-child(2) {
-  right: 0.9vw;
-}
-.pagination-btn:hover svg:nth-child(3) {
-  right: 0.5vw;
-}
-.pagination-btn:hover:last-child svg:first-child {
-  right: 1.3vw;
-}
-.pagination-btn:hover:last-child svg:nth-child(2) {
-  right: 0.9vw;
-}
-.pagination-btn:hover:last-child svg:nth-child(3) {
-  right: 0.5vw;
+@media (min-width: 1200px) {
+  .pagination-btn:hover svg:first-child {
+    right: 1.3vw;
+  }
+  .pagination-btn:hover svg:nth-child(2) {
+    right: 0.9vw;
+  }
+  .pagination-btn:hover svg:nth-child(3) {
+    right: 0.5vw;
+  }
+  .pagination-btn:hover:last-child svg:first-child {
+    right: 1.3vw;
+  }
+  .pagination-btn:hover:last-child svg:nth-child(2) {
+    right: 0.9vw;
+  }
+  .pagination-btn:hover:last-child svg:nth-child(3) {
+    right: 0.5vw;
+  }
 }
 
 .pagination-item {
@@ -4157,6 +4131,8 @@ table .table-choice--no {
   .pagination-btn svg:nth-child(3) {
     right: 2.5vw;
   }
+}
+@media only screen and (max-width: 1200px) and (min-width: 1200px) {
   .pagination-btn:hover svg:first-child {
     right: 1vw;
   }
@@ -4238,24 +4214,6 @@ table .table-choice--no {
   .pagination-btn svg:nth-child(3) {
     right: 0.7vw;
   }
-  .pagination-btn:hover svg:first-child {
-    right: 1.3vw;
-  }
-  .pagination-btn:hover svg:nth-child(2) {
-    right: 0.9vw;
-  }
-  .pagination-btn:hover svg:nth-child(3) {
-    right: 0.5vw;
-  }
-  .pagination-btn:hover:last-child svg:first-child {
-    right: 1.3vw;
-  }
-  .pagination-btn:hover:last-child svg:nth-child(2) {
-    right: 0.9vw;
-  }
-  .pagination-btn:hover:last-child svg:nth-child(3) {
-    right: 0.5vw;
-  }
   .pagination-item {
     font-size: 3.922vw;
     line-height: 7.843vw;
@@ -4269,26 +4227,6 @@ table .table-choice--no {
   }
   .pagination-btn svg:nth-child(3) {
     right: 2.5vw;
-  }
-  .pagination-btn:hover svg:first-child {
-    right: 1vw;
-  }
-  .pagination-btn:hover svg:nth-child(2) {
-    right: 2vw;
-    opacity: 1;
-  }
-  .pagination-btn:hover svg:nth-child(3) {
-    right: 3vw;
-  }
-  .pagination-btn:hover:last-child svg:first-child {
-    right: 0.8vw;
-  }
-  .pagination-btn:hover:last-child svg:nth-child(2) {
-    right: 1.8vw;
-    opacity: 1;
-  }
-  .pagination-btn:hover:last-child svg:nth-child(3) {
-    right: 2.8vw;
   }
 }
 .portfolio-single {
@@ -5108,6 +5046,7 @@ table .table-choice--no {
   -o-transition: all 0.35s ease-in;
   transition: all 0.35s ease-in;
   z-index: 1;
+  overflow: hidden;
 }
 
 .benefits-title {
@@ -5170,6 +5109,7 @@ table .table-choice--no {
   }
   .about .description-top__img {
     height: 13.333vw;
+    width: 16.993vw;
   }
   .about .description-top {
     gap: 2.614vw;
@@ -5264,6 +5204,9 @@ table .table-choice--no {
   .benefits-item {
     height: 35.948vw;
     border-radius: 1.307vw;
+  }
+  .benefits-item--active .benefits-item {
+    overflow: hidden;
   }
   .benefits-item--active .benefits-item img {
     -webkit-transform: scale(1.2) !important;
