@@ -2928,9 +2928,6 @@ a {
   background-color: transparent;
   border: 1px solid var(--gray-color);
 }
-.assortment-btn::after {
-  background-color: var(--gray-color);
-}
 .assortment-btn div,
 .assortment-btn span {
   border: none;
@@ -3007,9 +3004,6 @@ a {
     display: block;
     text-align: center;
     width: 100%;
-  }
-  .assortment-btn::after {
-    width: 0.1px;
   }
   .assortment-btn svg {
     width: 1.699vw;
@@ -3504,9 +3498,6 @@ a {
   height: 100%;
   border-color: var(--text-black);
 }
-.product-descr__btn::after {
-  background-color: var(--text-black);
-}
 .product-descr__btn span {
   font-size: 0.833vw;
 }
@@ -3718,9 +3709,6 @@ a {
   .product-descr__btn span {
     font-size: 2.353vw;
     line-height: 2.745vw;
-  }
-  .product-descr__btn::after {
-    width: 0.1px;
   }
   .product-descr__btn svg {
     width: 1.699vw;
