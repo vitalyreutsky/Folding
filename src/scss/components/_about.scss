@@ -158,6 +158,7 @@
   height: 17.292vw;
   border-radius: 10px;
   transition: all 0.35s ease-in;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   overflow: hidden;
   img {
     display: block;
@@ -181,6 +182,7 @@
   background-color: var(--text-black);
   backdrop-filter: blur(5px);
   transition: all 0.35s ease-in;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   z-index: 1;
   overflow: hidden;
 }

@@ -46,10 +46,6 @@
 .assortment-btn {
   background-color: transparent;
   border: 1px solid var(--gray-color);
-  &::after {
-    width: 0.1px;
-    background-color: var(--gray-color);
-  }
 
   div,
   span {
@@ -134,9 +130,6 @@
     display: block;
     text-align: center;
     width: 100%;
-    &::after {
-      width: 0.1px;
-    }
 
     svg {
       width: 1.699vw;
