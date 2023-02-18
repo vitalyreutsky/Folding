@@ -7,3 +7,9 @@
     margin-bottom: 11.765vw;
   }
 }
+
+@include mobile {
+  .main-offset {
+    margin-bottom: 10.667vw;
+  }
+}

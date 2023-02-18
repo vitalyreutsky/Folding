@@ -136,7 +136,7 @@
   .facts-items {
     gap: 0;
     flex-direction: row;
-    margin-bottom: 13vw;
+    margin-bottom: 7.843vw;
   }
   .facts-item {
     align-items: stretch;
@@ -188,5 +188,57 @@
   .facts-swiper__btn {
     text-align: center;
     width: 55vw;
+  }
+}
+
+@include mobile {
+  .facts {
+    .products__top {
+      margin-bottom: 5.621vw;
+    }
+  }
+
+  .facts-items {
+    margin-bottom: 4vw;
+  }
+
+  .facts-item {
+    gap: 0;
+  }
+
+  .fact-num {
+    display: none;
+  }
+  .fact-content {
+    flex-direction: column;
+    gap: 4vw;
+    padding: 4vw;
+    border-radius: 1.867vw;
+  }
+  .fact-img {
+    width: 100%;
+    height: 29.6vw;
+    margin-right: 0;
+    border-radius: 1.867vw;
+  }
+
+  .fact-descr {
+    gap: 2.667vw;
+  }
+  .fact-title {
+    font-size: 5.333vw;
+    line-height: 6.4vw;
+  }
+  .fact-text {
+    font-size: 3.733vw;
+    line-height: 4.8vw;
+  }
+
+  .fact-btn {
+    margin-left: auto;
+  }
+
+  .facts-swiper__btn {
+    width: 100%;
   }
 }

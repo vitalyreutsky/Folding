@@ -155,3 +155,46 @@
     }
   }
 }
+
+@include mobile {
+  .assortment {
+    &__container {
+      flex-direction: column;
+      padding: 97vw 3.922vw 13.333vw;
+      border-radius: 2.667vw;
+    }
+  }
+
+  .assortment-img {
+    top: -40vw;
+    left: 19vw;
+    width: auto;
+    height: 146vw;
+    object-position: left;
+  }
+
+  .assortment-title {
+    max-width: 44.183vw;
+    margin-bottom: 3.922vw;
+  }
+
+  .assortment-text {
+    max-width: 100%;
+    margin-bottom: 13vw;
+  }
+
+  .assortment-btn {
+    svg {
+      width: 3.2vw;
+      height: 3.2vw;
+      &:first-child {
+        right: 4.5vw;
+        top: 33%;
+      }
+      &:nth-child(3) {
+        right: 4.5vw;
+        top: 47%;
+      }
+    }
+  }
+}

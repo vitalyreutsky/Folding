@@ -41,7 +41,7 @@
     }
   }
 
-  @include tablet {
+  @include for-desktop {
     &:hover {
       color: var(--text-black);
       background-color: var(--gold-color);
@@ -318,6 +318,69 @@
       }
       &:last-child {
         right: 1.7vw;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .btn--primary {
+    font-size: 4.267vw;
+    line-height: 5.6vw;
+    padding: 3.5vw 6.302vw 3.5vw 3.125vw;
+    border-radius: 1.333vw;
+    &::after {
+      right: 13vw;
+    }
+    svg {
+      width: 3.2vw;
+      height: 3.2vw;
+
+      &:first-child {
+        right: 4vw;
+      }
+      &:nth-child(3) {
+        right: 5.5vw;
+      }
+    }
+  }
+
+  .btn--small {
+    width: 13.333vw;
+    height: 13.333vw;
+    border-radius: 1.333vw;
+    svg {
+      width: 3.2vw;
+      height: 3.2vw;
+    }
+  }
+
+  .btn--secondary {
+    span {
+      width: 8vw;
+      height: 6.4vw;
+      font-size: 2.667vw;
+      line-height: 3.2vw;
+      border-top-left-radius: 1.333vw;
+      border-bottom-left-radius: 1.333vw;
+    }
+
+    div {
+      width: 8vw;
+      height: 6.4vw;
+      border-top-right-radius: 1.333vw;
+      border-bottom-right-radius: 1.333vw;
+    }
+
+    svg {
+      width: 2.133vw;
+      height: 2.133vw;
+
+      &:first-child {
+        right: 2vw;
+      }
+      &:last-child {
+        right: 3.5vw;
       }
     }
   }

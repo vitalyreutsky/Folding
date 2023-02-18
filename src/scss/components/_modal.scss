@@ -127,3 +127,61 @@
     }
   }
 }
+
+@include mobile {
+  .modal {
+    .graph-modal__close {
+      width: 7vw;
+      height: 7vw;
+      top: 4vw;
+      right: 4vw;
+    }
+  }
+
+  .modal-container {
+    max-width: 91.563vw;
+    border-radius: 2.667vw;
+  }
+
+  .modal-title {
+    font-size: 5.867vw;
+    line-height: 8vw;
+    margin-bottom: 2.667vw;
+  }
+
+  .modal-text.feedback-text {
+    font-size: 4.8vw;
+    line-height: 5.867vw;
+    margin-bottom: 8vw;
+  }
+
+  .modal-form.feedback-form {
+    padding: 18.667vw 4vw 12vw;
+    width: 100%;
+  }
+
+  .modal-img {
+    display: none;
+  }
+
+  //discount modal
+  .modal-discount {
+    .modal-content {
+      margin-right: 0;
+    }
+
+    .modal-title {
+      padding: 18.667vw 4vw 8vw;
+      font-size: 5.49vw;
+      line-height: 6.797vw;
+      margin-bottom: 1.961vw;
+    }
+
+    .modal-form {
+      padding-top: 0;
+      form {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -25,3 +25,15 @@
     line-height: 4.444vw;
   }
 }
+
+@include mobile {
+  .title-page {
+    font-size: 5.867vw;
+    line-height: 8.8vw;
+  }
+
+  .text-page {
+    font-size: 4.8vw;
+    line-height: 5.867vw;
+  }
+}

@@ -307,3 +307,16 @@
     }
   }
 }
+
+@include mobile {
+  .pagination-btn {
+    svg {
+      &:first-child {
+        right: 2.5vw;
+      }
+      &:nth-child(3) {
+        right: 4vw;
+      }
+    }
+  }
+}

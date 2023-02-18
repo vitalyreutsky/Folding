@@ -85,9 +85,10 @@ function swiperCardFacts() {
         spaceBetween: 50,
         speed: 1000,
         loop: true,
+        autoHeight: true,
         navigation: {
-          nextEl: ".facts-swiper__prev",
-          prevEl: ".facts-swiper__next",
+          nextEl: ".facts-swiper__next",
+          prevEl: ".facts-swiper__prev",
         },
 
         pagination: {
@@ -145,6 +146,17 @@ const worksSwiper = new Swiper(".works-swiper", {
         depth: 100,
         modifier: 1,
         slideShadows: false,
+        scale: 2,
+      },
+    },
+    600: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: -60,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
         scale: 1.5,
       },
     },
@@ -171,6 +183,9 @@ const worksSwiper = new Swiper(".works-swiper", {
 
       breakpoints: {
         0: {
+          slidesPerView: 2,
+        },
+        600: {
           slidesPerView: 3.1,
         },
         1200: {

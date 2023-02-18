@@ -104,7 +104,7 @@
 
 @include tablet {
   .hero {
-    padding-top: 28.305px;
+    padding-top: 8vw;
     &__container {
       flex-direction: column-reverse;
       padding: 0;
@@ -117,7 +117,7 @@
 
   .hero-swiper {
     margin-right: 0;
-    max-width: 93vw;
+    max-width: 91.563vw;
     gap: 3.922vw;
     min-height: auto;
     margin: 0 auto;
@@ -178,5 +178,75 @@
     min-height: auto;
     height: 56.209vw;
     border-radius: 0;
+  }
+}
+
+@include mobile {
+  .hero {
+    padding-top: 17vw;
+    &__container {
+      gap: 2.614vw;
+    }
+  }
+
+  .hero-swiper {
+    max-width: 91.563vw;
+    gap: 6.133vw;
+
+    &__slide {
+      gap: 2.667vw;
+    }
+
+    &__title {
+      font-size: 5.867vw;
+      line-height: 8.8vw;
+    }
+
+    &__text {
+      gap: 2.133vw;
+    }
+
+    &__bottom {
+      gap: 4vw;
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+
+    &__pagination {
+      justify-content: space-between;
+      gap: 0;
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    &__fraction {
+      text-align: center;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+
+    &__current {
+      font-size: 12.8vw;
+      line-height: 12.4vw;
+      padding-right: 2vw;
+      &::after {
+        top: 50%;
+        right: 0;
+        width: 1px;
+        height: 4.5vw;
+      }
+    }
+
+    &__total {
+      font-size: 4.267vw;
+      line-height: 6.133vw;
+      padding-left: 2vw;
+    }
+  }
+
+  .hero-img {
+    height: 81.6vw;
   }
 }

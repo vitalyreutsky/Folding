@@ -225,7 +225,6 @@
   display: none;
 }
 
-//!media
 @include tablet {
   .header {
     padding: 1.699vw 0;
@@ -333,7 +332,7 @@
   }
 
   .nav {
-    padding: 14.51vw 3.5vw 6.275vw;
+    padding: 14.51vw 3.922vw 6.275vw;
 
     &__list {
       display: flex;
@@ -393,7 +392,7 @@
   .lang {
     display: none;
     &__sub-menu {
-      padding: 0 3.5vw 3.922vw;
+      padding: 0 3.922vw 3.922vw;
       position: static;
       display: flex;
       flex-direction: row;
@@ -412,8 +411,8 @@
     font-weight: 400;
     font-size: 2.614vw;
     line-height: 2.353vw;
-    width: 135px;
-    height: 44px;
+    width: 17.647vw;
+    height: 5.752vw;
     border-radius: 4px;
     border: 1px solid var(--text-black);
   }
@@ -425,7 +424,7 @@
     border-top: 1px solid #dcdcdc;
     .feedback-form {
       width: 100%;
-      padding: 0 3.5vw;
+      padding: 0 3.922vw;
     }
 
     .feedback-title {
@@ -461,6 +460,141 @@
       &::placeholder {
         font-size: 2.5vw;
         line-height: 3.66vw;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .header {
+    padding: 3.467vw 0;
+
+    &__logo {
+      position: relative;
+      top: 1vw;
+      width: 46.133vw;
+      margin-left: 22vw;
+    }
+
+    &__btn {
+      width: 12.267vw;
+      height: 9.067vw;
+      border-radius: 1.067vw;
+
+      svg {
+        width: 4.533vw;
+        height: 4.267vw;
+      }
+    }
+  }
+
+  //бургер меню
+  .burger {
+    left: 3.922vw;
+    width: 10.667vw;
+    height: 6.933vw;
+
+    &::before,
+    &::after,
+    &__line {
+      height: 0.533vw;
+      border-radius: 2.933vw;
+    }
+  }
+
+  .menu {
+    &__wrapper {
+      width: 100%;
+    }
+
+    &__top {
+      padding: 3.467vw 0;
+    }
+
+    &__logo {
+      position: relative;
+      top: 1vw;
+      width: 46.133vw;
+    }
+  }
+
+  .nav {
+    padding: 25vw 3.922vw 6.4vw;
+
+    &__list {
+      gap: 4vw;
+    }
+
+    &__link {
+      font-size: 4.8vw;
+      line-height: 4.8vw;
+    }
+  }
+
+  .sub-menu {
+    top: 1vw;
+    left: -0.5vw;
+    padding: 0.781vw 0.573vw;
+    border-radius: 5px;
+    &__list {
+      gap: 0.625vw;
+    }
+  }
+
+  //lang
+  .lang__sub-menu {
+    padding-bottom: 4vw;
+    gap: 0;
+  }
+
+  .lang-item {
+    font-size: 3.467vw;
+    line-height: 3.2vw;
+    width: 28.267vw;
+    height: 7.733vw;
+    border-radius: 1.067vw;
+  }
+
+  .menu__form {
+    padding-top: 4vw;
+    padding-bottom: 10vw;
+    .feedback-form {
+      padding: 0 3.922vw;
+    }
+
+    .feedback-title {
+      font-size: 6.933vw;
+      line-height: 8vw;
+      margin-bottom: 2.667vw;
+    }
+
+    .feedback-text {
+      font-size: 4.267vw;
+      line-height: 5.333vw;
+      margin-bottom: 4vw;
+    }
+
+    .form {
+      gap: 4vw;
+    }
+
+    .form__label {
+      svg {
+        left: 4vw;
+        width: 5.6vw;
+        height: 5.6vw;
+      }
+      &::after {
+        left: 13vw;
+      }
+    }
+
+    .form__input {
+      padding: 3.5vw 2.5vw 3.5vw 17vw;
+      border-radius: 1.333vw;
+      &::placeholder {
+        font-size: 4.267vw;
+        line-height: 7.467vw;
       }
     }
   }
