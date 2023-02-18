@@ -141,3 +141,56 @@
     border-radius: 1.307vw;
   }
 }
+
+@include mobile {
+  .process {
+    &-wrapper {
+      padding: 8vw 4vw;
+      top: -7vw;
+    }
+
+    &-wrapper__top {
+      margin-bottom: 10.667vw;
+    }
+
+    .single-description {
+      margin-bottom: 10.667vw;
+    }
+
+    &-top {
+      height: 56.267vw;
+    }
+
+    .breadcrumbs {
+      padding-top: 21vw;
+    }
+
+    .description-left {
+      width: auto;
+    }
+
+    .description-right {
+      max-width: 100%;
+      margin-bottom: 5.333vw;
+    }
+
+    .description-img {
+      width: 100%;
+      height: 50.667vw;
+    }
+  }
+
+  .description-subtitle {
+    font-size: 5.333vw;
+    line-height: 10.667vw;
+  }
+
+  .description-items {
+    gap: 5.229vw;
+  }
+
+  .description-img {
+    height: 30.85vw;
+    border-radius: 1.307vw;
+  }
+}

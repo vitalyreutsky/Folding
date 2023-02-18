@@ -227,6 +227,9 @@
 }
 //price-block
 .price-block {
+  br {
+    display: none;
+  }
   padding: 0.5vw 0 1vw;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   &__text {
@@ -280,6 +283,12 @@
 //characteristic-table
 .characteristics-table {
   margin-bottom: 4.167vw;
+
+  .single-product__btn {
+    color: var(--light-color);
+    background-color: var(--text-black);
+    border: none;
+  }
 }
 .characteristics-table__top {
   align-items: flex-end;
@@ -406,7 +415,6 @@ table .table-choice--no {
   .single-swiper {
     height: 81.176vw;
     margin-bottom: 2.614vw;
-    height: 100%;
   }
 
   .single-wrapper {
@@ -639,5 +647,223 @@ table .table-choice--no {
   .certificate-img__inner {
     display: none;
     height: 10.521vw;
+  }
+}
+
+@include mobile {
+  .single {
+    padding-top: 21vw;
+  }
+
+  .single-product {
+    gap: 4vw;
+    margin-bottom: 10.667vw;
+
+    &__title {
+      font-size: 5.333vw;
+      line-height: 8.933vw;
+      margin-bottom: 2.667vw;
+    }
+
+    &__text {
+      font-size: 4.267vw;
+      line-height: 6.4vw;
+      margin-bottom: 5.333vw;
+    }
+
+    &__btn {
+      svg {
+        width: 4.8vw;
+        height: 5.6vw;
+        &:first-child {
+          right: 4vw;
+        }
+      }
+    }
+  }
+
+  //swiper
+  .single-swiper {
+    height: 80vw;
+    margin-bottom: 4vw;
+  }
+
+  .single-wrapper {
+    height: 100%;
+  }
+
+  .single-slide {
+    height: 100%;
+    border-radius: 1.307vw;
+  }
+
+  .single-swiper__zoom {
+    right: 3vw;
+    bottom: 3vw;
+    width: 7.467vw;
+    height: 7.467vw;
+  }
+
+  //swiper-mini
+  .single-mini {
+    height: 26.667vw;
+  }
+
+  .single-slide__mini {
+    height: calc(100% - 2.5vw);
+    img {
+      border-radius: 2.133vw;
+    }
+  }
+
+  //active slide mini
+  .single-swiper__mini .swiper-slide-thumb-active {
+    &::after {
+      bottom: -2.5vw;
+      height: 0.8vw;
+      border-radius: 2.667vw;
+    }
+  }
+
+  //guarantee
+  .guarantee {
+    padding: 4.8vw 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4.8vw;
+    &__item {
+      gap: 3.2vw;
+      svg {
+        width: 5.6vw;
+        height: 5.6vw;
+      }
+      h4 {
+        font-size: 4.267vw;
+        line-height: 8vw;
+      }
+    }
+  }
+
+  //characteristic
+  .characteristics {
+    padding: 4vw 0;
+    gap: 2.222vw;
+  }
+
+  .characteristic {
+    gap: 2.667vw;
+    &__title {
+      font-size: 4.267vw;
+      line-height: 8vw;
+    }
+
+    &__list {
+      column-gap: 5vw;
+      row-gap: 2vw;
+    }
+
+    &__item {
+      font-size: 4.267vw;
+      line-height: 7.467vw;
+      padding-left: 3vw;
+      &::before {
+        width: 1vw;
+        height: 1vw;
+      }
+    }
+  }
+  //price-block
+  .price-block {
+    br {
+      display: block;
+    }
+    padding: 4vw 0;
+    &__text {
+      font-size: 4.267vw;
+      line-height: 8vw;
+    }
+
+    &__old {
+      font-size: 5.333vw;
+      line-height: 7.467vw;
+      padding: 0 2vw;
+    }
+
+    &__new {
+      font-size: 11.2vw;
+      line-height: 16vw;
+      padding-right: 2vw;
+    }
+  }
+
+  //description
+  .single-description.container {
+    margin-bottom: -20vw;
+  }
+
+  .description-top {
+    height: 108.8vw;
+    border-radius: 0;
+  }
+  .description-title {
+    left: 4vw;
+    bottom: 37vw;
+  }
+
+  //characteristic-table
+  .characteristics-table {
+    margin-bottom: 8vw;
+  }
+
+  .characteristics__top-title {
+    font-size: 5.867vw;
+    line-height: 8vw;
+  }
+  .table-content {
+    margin-bottom: 5.229vw;
+  }
+
+  table.table {
+    margin-bottom: 4vw;
+    border-radius: 2.667vw;
+  }
+
+  .simplebar-track.simplebar-horizontal {
+    height: 1vw;
+    border-radius: 2.667vw;
+  }
+
+  table.table td,
+  table.table th {
+    padding: 4vw 2.667vw;
+    min-height: auto;
+    height: auto;
+  }
+
+  table.table th {
+    font-size: 4.267vw;
+    line-height: 5vw;
+  }
+  table.table td {
+    font-size: 4.267vw;
+    line-height: 5vw;
+  }
+
+  //certificates
+  .certificates {
+    margin-bottom: 18.667vw;
+  }
+  .certificates-title {
+    margin-bottom: 5.333vw;
+  }
+
+  .certificate {
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.25));
+    border-radius: 1.995vw;
+  }
+
+  .certificate-img {
+    width: 100%;
+    height: calc(100% - 2vw);
   }
 }

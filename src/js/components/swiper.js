@@ -206,6 +206,16 @@ catalogSliders.forEach((slider) => {
     slidesPerGroup: 1,
     slidesPerView: "auto",
 
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      600: {
+        slidesPerView: "auto",
+      },
+    },
+
     navigation: {
       nextEl: slider.previousElementSibling.querySelector(".catalog-next"),
       prevEl: slider.previousElementSibling.querySelector(".catalog-prev"),
@@ -235,7 +245,7 @@ catalogSliders.forEach((slider) => {
 
     if (slides.length <= 2) {
       slides.forEach((item) => {
-        item.style.width = "46.8%";
+        item.style.width = "50%";
       });
     }
 
@@ -245,6 +255,12 @@ catalogSliders.forEach((slider) => {
       });
     }
   }
+
+  //if (window.innerWidth < 600) {
+  //  slides.forEach((item) => {
+  //    item.style.width = "97%";
+  //  });
+  //}
 });
 
 //!single
@@ -268,11 +284,18 @@ const singleSwiper = new Swiper(".single-swiper", {
   thumbs: {
     swiper: {
       el: ".single-swiper__mini",
-      slidesPerView: 5,
       spaceBetween: 15,
       keyboard: {
         enabled: true,
         onlyInViewport: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 3,
+        },
+        600: {
+          slidesPerView: 5,
+        },
       },
     },
   },
@@ -316,10 +339,19 @@ function swiperCertificates() {
       initCertificates = true;
       Swiper.use([Navigation, Pagination, EffectFade]);
       let swiper = new Swiper(".certificates-items", {
-        slidesPerView: 2.1,
-        spaceBetween: 50,
         speed: 1000,
         loop: true,
+
+        breakpoints: {
+          0: {
+            slidesPerView: 1.05,
+            spaceBetween: 20,
+          },
+          600: {
+            slidesPerView: 2.1,
+            spaceBetween: 50,
+          },
+        },
       });
     }
   } else if (initCertificates) {

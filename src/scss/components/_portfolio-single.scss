@@ -41,11 +41,17 @@
     height: 100%;
     overflow: hidden;
     border-radius: 0.521vw;
+
     img {
       display: block;
       width: 100%;
       height: 100%;
     }
+
+    &:nth-child(n + 6) {
+      display: none;
+    }
+
     &:nth-child(1) {
       grid-area: 1 / 1 / 4 / 3;
     }
@@ -213,6 +219,91 @@
   .recently-btns {
     gap: 1.563vw;
   }
-  .recently .products__top-descr {
+}
+
+@include mobile {
+  .portfolio-single {
+    padding-top: 21vw;
+    .container {
+      max-width: 100%;
+    }
+
+    .breadcrumbs {
+      margin-left: 3.922vw;
+    }
+  }
+
+  .portfolio-single {
+    &__top-title {
+      font-size: 5.333vw;
+      line-height: 6.933vw;
+      margin-bottom: 10vw;
+    }
+
+    &__wrapper {
+      padding: 4vw;
+      margin-bottom: 10.667vw;
+      border-radius: 0;
+    }
+
+    &__images {
+      gap: 4vw;
+      margin-bottom: 8vw;
+    }
+
+    &__img {
+      border-radius: 1.333vw;
+      &:nth-child(1) {
+        height: 85.333vw;
+      }
+
+      &:nth-child(2) {
+        height: 31.467vw;
+      }
+
+      &:nth-child(3) {
+        height: 52.533vw;
+      }
+
+      &:nth-child(4) {
+        height: 52.533vw;
+      }
+
+      &:nth-child(5) {
+        height: 31.467vw;
+      }
+    }
+
+    &__descr {
+      gap: 5.333vw;
+    }
+
+    &__title {
+      font-size: 5.333vw;
+      line-height: 6.933vw;
+      margin-bottom: 2.667vw;
+    }
+
+    &__text {
+      gap: 2.667vw;
+      margin-bottom: 8vw;
+      p {
+        font-size: 4.267vw;
+        line-height: 6.4vw;
+      }
+    }
+  }
+
+  //recently
+  .recently {
+    max-width: 91.563vw;
+    margin: 0 auto 10.667vw;
+  }
+  .recently-btns {
+    justify-content: flex-end;
+    gap: 4vw;
+  }
+  .recently-swiper {
+    margin-bottom: 5.333vw;
   }
 }

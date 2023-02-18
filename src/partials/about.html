@@ -8,9 +8,12 @@
               href="index.html"
               class="breadcrumbs__link breadcrumbs__link-back"
             >
-              <svg>
-                <use xlink:href="img/sprite.svg#back"></use>
-              </svg>
+              <img
+                loading="lazy"
+                src="img/back-white.svg"
+                class="image"
+                alt="Back"
+              />
               Назад
             </a>
           </li>
@@ -302,6 +305,8 @@
         </p>
         <button
           class="partners-btn btn btn-reset btn--primary"
+          data-graph-path="main-modal"
+          data-graph-animation="fadeInUp"
           data-da=".partners-inner,1200,last"
         >
           <svg>

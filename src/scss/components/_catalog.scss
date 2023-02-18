@@ -365,3 +365,133 @@
     }
   }
 }
+
+@include mobile {
+  .catalog {
+    padding-top: 21vw;
+
+    &__title {
+      margin-bottom: 4vw;
+    }
+  }
+
+  .catalog-products__sliders {
+    gap: 4vw;
+  }
+
+  .catalog-product__slider {
+    gap: 4vw;
+
+    &:not(:last-child) {
+      padding-bottom: 4vw;
+    }
+  }
+
+  .product-descr {
+    padding: 5.867vw 3.922vw;
+
+    &__title {
+      font-size: 5.333vw;
+      line-height: 6.4vw;
+      margin-bottom: 2.667vw;
+    }
+
+    &__text {
+      font-size: 3.733vw;
+      line-height: 4.8vw;
+      margin-bottom: 8vw;
+    }
+
+    &__bottom {
+      justify-content: space-between;
+      height: auto;
+      gap: 0;
+      width: 100%;
+      margin: 0;
+    }
+
+    &__btn {
+      justify-content: flex-start;
+      width: 57vw;
+      height: 11.733vw;
+      padding: 0;
+      border-radius: 1.333vw;
+      &::after {
+        right: 14vw;
+      }
+
+      span {
+        padding-left: 3.5vw;
+        font-size: 4.267vw;
+        line-height: 6.4vw;
+      }
+
+      svg {
+        width: 4vw;
+        height: 4vw;
+        &:first-child {
+          right: 5vw;
+          top: 25%;
+        }
+        &:nth-child(3) {
+          right: 5vw;
+          top: 41%;
+        }
+      }
+    }
+  }
+
+  .catalog-btns {
+    width: auto;
+    gap: 3.467vw;
+  }
+
+  .catalog-prev,
+  .catalog-next {
+    width: 11.733vw;
+    height: 11.733vw;
+    border-radius: 1.333vw;
+    svg {
+      width: 4vw;
+      height: 4vw;
+
+      &:first-child {
+        right: 0.7vw;
+      }
+      &:nth-child(3) {
+        right: 2.5vw;
+      }
+    }
+  }
+
+  .catalog-swiper {
+    margin: 0;
+    width: calc(100% - 3.922vw);
+    &::after {
+      display: none;
+    }
+  }
+
+  .catalog-slide {
+    height: 72.267vw;
+    border-radius: 1.867vw;
+
+    &__label {
+      top: 4vw;
+      left: 4vw;
+      padding: 0.5vw 2.7vw;
+      font-size: 3.2vw;
+      line-height: 5.6vw;
+      border-radius: 1.333vw;
+    }
+
+    &__name {
+      h3 {
+        min-height: 8vw;
+        padding: 4.8vw 4vw;
+        font-size: 4.267vw;
+        line-height: 5.333vw;
+      }
+    }
+  }
+}

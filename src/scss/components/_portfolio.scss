@@ -309,6 +309,82 @@
 }
 
 @include mobile {
+  .portfolio {
+    padding-top: 21vw;
+    margin-bottom: 10.667vw;
+  }
+
+  .portfolio-wrapper {
+    gap: 4vw;
+    margin-bottom: 8vw;
+  }
+  .portfolio-column {
+    padding: 4vw;
+    border-radius: 2.133vw;
+  }
+
+  .portfolio-item {
+    &__img {
+      margin-bottom: 4.533vw;
+    }
+
+    &__title {
+      font-size: 5.333vw;
+      line-height: 6.4vw;
+      margin-bottom: 2.667vw;
+    }
+
+    &__text {
+      margin-bottom: 6.133vw;
+      font-size: 3.733vw;
+      line-height: 4.8vw;
+    }
+
+    &__btn {
+      height: 11.733vw !important;
+    }
+  }
+
+  .portfolio-swiper {
+    &__pagination {
+      .swiper-pagination-bullet {
+        height: 0.8vw;
+        border-radius: 2.667vw;
+      }
+    }
+  }
+
+  .portfolio-slide {
+    &__img {
+      height: 50.667vw;
+      border-radius: 2.133vw;
+    }
+  }
+
+  //pagination
+  .pagination-list {
+    justify-content: center;
+    gap: 7.843vw;
+  }
+  .pagination-btn {
+    svg {
+      &:first-child {
+        right: 1vw;
+      }
+      &:nth-child(2) {
+        right: 0.9vw;
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        right: 0.7vw;
+      }
+    }
+  }
+  .pagination-item {
+    font-size: 5.867vw;
+    line-height: 16vw;
+  }
+
   .pagination-btn {
     svg {
       &:first-child {

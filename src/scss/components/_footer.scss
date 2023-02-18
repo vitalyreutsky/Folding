@@ -136,6 +136,7 @@
     width: 3.177vw;
     height: 4.167vw;
     animation: marker 1.1s linear infinite;
+    z-index: 1;
   }
 
   &::after {
@@ -156,13 +157,13 @@
 
 @keyframes marker {
   0% {
-    top: 40%;
-  }
-  50% {
     top: 42%;
   }
+  50% {
+    top: 44%;
+  }
   100% {
-    top: 40%;
+    top: 42%;
   }
 }
 
@@ -249,7 +250,7 @@
     }
 
     &::after {
-      top: 73%;
+      top: 68%;
       left: 46%;
       width: 5.752vw;
       height: 1.569vw;
@@ -353,7 +354,7 @@
     }
 
     &::after {
-      top: 67%;
+      top: 58%;
       left: 45%;
       width: 8vw;
       height: 2.133vw;
@@ -362,13 +363,13 @@
 
   @keyframes marker {
     0% {
-      top: 37%;
+      top: 32%;
     }
     50% {
-      top: 39%;
+      top: 36%;
     }
     100% {
-      top: 37%;
+      top: 32%;
     }
   }
 }

@@ -84,12 +84,6 @@
   .error {
     padding-top: 12vw;
 
-    &-container {
-    }
-
-    .products__top {
-    }
-
     .products__top-descr {
       gap: 1.961vw;
       margin-bottom: 1.094vw;
@@ -126,6 +120,46 @@
       right: -14%;
       width: 15.163vw;
       height: 15.817vw;
+    }
+  }
+}
+
+@include mobile {
+  .error {
+    padding-top: 21vw;
+
+    .products__top-descr {
+      gap: 4vw;
+      margin-bottom: 2.667vw;
+    }
+
+    .text-page {
+      font-size: 4.8vw;
+      line-height: 6.933vw;
+    }
+  }
+
+  .error-image {
+    left: 3.3vw;
+  }
+
+  .error-present {
+    height: 28.533vw;
+    width: 100%;
+    margin-bottom: 8vw;
+  }
+
+  .btn--present {
+    width: 100%;
+    height: 11.733vw;
+    padding: 0 11vw 0 4vw;
+    font-size: 4.267vw;
+    line-height: 5.067vw;
+    img {
+      top: -11vw;
+      right: -9vw;
+      width: 30.933vw;
+      height: 32.267vw;
     }
   }
 }

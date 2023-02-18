@@ -76,3 +76,30 @@
     }
   }
 }
+
+@include mobile {
+  .breadcrumbs {
+    margin-bottom: 2.667vw;
+
+    &__item-main {
+      display: none;
+    }
+
+    &__item-back {
+      display: block;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      gap: 1.333vw;
+      font-size: 4.267vw;
+      line-height: 6.133vw;
+
+      img {
+        width: 8vw;
+        height: 8vw;
+      }
+    }
+  }
+}

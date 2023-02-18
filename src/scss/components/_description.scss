@@ -88,3 +88,39 @@
     gap: 0.5vw;
   }
 }
+
+@include mobile {
+  .description-wrapper {
+    gap: 5.333vw;
+    top: -30vw;
+    padding: 10.667vw 5.333vw;
+    border-radius: 2.667vw;
+  }
+  .description-item {
+    gap: 2.667vw;
+    flex-direction: column;
+  }
+  .description-left {
+    width: auto;
+    gap: 2.667vw;
+    span {
+      font-size: 5.867vw;
+      line-height: 8vw;
+    }
+    h4 {
+      font-size: 4.267vw;
+      line-height: 7.467vw;
+    }
+  }
+  .description-right {
+    gap: 4vw;
+    max-width: 100%;
+  }
+  .description-text {
+    font-size: 4.267vw;
+    line-height: 6.4vw;
+  }
+  .description-list {
+    gap: 2.667vw;
+  }
+}

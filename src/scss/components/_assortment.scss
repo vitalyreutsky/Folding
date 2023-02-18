@@ -196,5 +196,9 @@
         top: 47%;
       }
     }
+
+    &::after {
+      background-color: var(--gray-color);
+    }
   }
 }

@@ -4,9 +4,7 @@
       <ul class="breadcrumbs__list list-reset">
         <li class="breadcrumbs__item-back">
           <a href="index.html" class="breadcrumbs__link breadcrumbs__link-back">
-            <svg>
-              <use xlink:href="img/sprite.svg#back"></use>
-            </svg>
+            <img loading="lazy" src="img/back.svg" class="image" alt="Back" />
             Назад
           </a>
         </li>
@@ -306,7 +304,8 @@
 
         <div class="single-product__price-block price-block">
           <p class="price-block__text">
-            Стоимость от <span class="price-block__old">280</span>
+            Стоимость от <br />
+            <span class="price-block__old">280</span>
             <span class="price-block__new">260</span> $/м2 без НДС
           </p>
         </div>
@@ -401,21 +400,15 @@
             Технические характеристики раздвижных перегородок
           </h2>
         </div>
+
         <button
-          href="#"
-          class="btn btn-reset btn--primary works__top-btn"
+          class="btn btn-reset btn--primary single-product__btn"
           data-graph-path="main-modal"
           data-graph-animation="fadeInUp"
           data-da=".characteristics-table,1200,last"
         >
           <svg>
-            <use xlink:href="img/sprite.svg#bottom"></use>
-          </svg>
-          <svg>
-            <use xlink:href="img/sprite.svg#bottom"></use>
-          </svg>
-          <svg>
-            <use xlink:href="img/sprite.svg#bottom"></use>
+            <use xlink:href="img/sprite.svg#calc"></use>
           </svg>
           <span>Рассчитать мой проект</span>
         </button>
