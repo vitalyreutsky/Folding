@@ -3,55 +3,58 @@
 }
 
 .contacts-map {
+  position: relative;
   margin-bottom: 1.563vw;
   width: 100%;
   height: 29.635vw;
   border-radius: 10px;
   overflow: hidden;
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   &__img {
     display: block;
     width: 100%;
     height: 100%;
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &__marker {
-    img {
-      position: absolute;
-      left: 47vw;
-      display: block;
-      width: 3.177vw;
-      height: 4.167vw;
-      animation: contacts-marker 1.1s linear infinite;
-      z-index: 1;
-    }
 
     &::after {
       content: "";
       position: absolute;
-      top: 28.5vw;
-      left: 48.5vw;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
       width: 2.292vw;
       height: 0.625vw;
       border-radius: 50%;
       background-color: var(--gold-color);
     }
   }
+
+  &__marker {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 3.177vw;
+    height: 4.167vw;
+    animation: contacts-marker 1.1s linear infinite;
+    z-index: 1;
+  }
 }
 
 @keyframes contacts-marker {
   0% {
-    top: 24vw;
+    top: 43%;
   }
   50% {
-    top: 25vw;
+    top: 45%;
   }
   100% {
-    top: 24vw;
+    top: 43%;
   }
 }
 
@@ -176,30 +179,16 @@
     height: 67.451vw;
     border-radius: 0;
 
-    &__marker {
-      img {
-        left: 44.6vw;
-        width: 7.974vw;
-        height: 10.458vw;
-      }
-
+    &__img {
       &::after {
-        top: 63.5vw;
         width: 5.752vw;
         height: 1.569vw;
       }
     }
-  }
 
-  @keyframes contacts-marker {
-    0% {
-      top: 53vw;
-    }
-    50% {
-      top: 55vw;
-    }
-    100% {
-      top: 53vw;
+    &__marker {
+      width: 7.974vw;
+      height: 10.458vw;
     }
   }
 
@@ -309,30 +298,16 @@
     margin-bottom: 5.333vw;
     height: 69.867vw;
 
-    &__marker {
-      img {
-        left: 43.5vw;
-        width: 10.667vw;
-        height: 13.867vw;
-      }
-
+    &__img {
       &::after {
-        top: 80.5vw;
         width: 7.467vw;
         height: 2.133vw;
       }
     }
-  }
 
-  @keyframes contacts-marker {
-    0% {
-      top: 67vw;
-    }
-    50% {
-      top: 69vw;
-    }
-    100% {
-      top: 67vw;
+    &__marker {
+      width: 10.667vw;
+      height: 13.867vw;
     }
   }
 

@@ -118,37 +118,41 @@
   flex-shrink: 0;
 }
 .map {
-  position: relative;
   width: 34vw;
 }
 .map-img {
   position: relative;
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-}
-.map-marker {
-  img {
-    position: absolute;
-    left: 15.5vw;
-    width: 3.177vw;
-    height: 4.167vw;
-    animation: marker 1.1s linear infinite;
-    z-index: 1;
-  }
+  display: block;
+  width: 100%;
+  height: 100%;
 
   &::after {
     content: "";
     position: absolute;
-    top: 17.5vw;
-    left: 15.8vw;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 2.292vw;
     height: 0.625vw;
     border-radius: 50%;
     background-color: var(--gold-color);
   }
+}
+
+.map-img__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.map-marker {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.177vw;
+  height: 4.167vw;
+  animation: marker 1.1s linear infinite;
+  z-index: 1;
 }
 
 .footer-map--mob {
@@ -157,13 +161,13 @@
 
 @keyframes marker {
   0% {
-    top: 13vw;
+    top: 50%;
   }
   50% {
-    top: 14vw;
+    top: 52%;
   }
   100% {
-    top: 13vw;
+    top: 50%;
   }
 }
 
@@ -242,31 +246,17 @@
     height: 39.216vw;
   }
 
-  .map-marker {
-    img {
-      left: 44.3vw;
-      width: 7.974vw;
-      height: 10.458vw;
-    }
-
+  .map-img {
     &::after {
-      top: 26vw;
-      left: 45.3vw;
+      top: 63%;
       width: 5.752vw;
       height: 1.569vw;
     }
   }
 
-  @keyframes marker {
-    0% {
-      top: 15vw;
-    }
-    50% {
-      top: 17vw;
-    }
-    100% {
-      top: 15vw;
-    }
+  .map-marker {
+    width: 7.974vw;
+    height: 10.458vw;
   }
 }
 
@@ -346,30 +336,15 @@
     height: 57.6vw;
   }
 
-  .map-marker {
-    img {
-      left: 42vw;
-      width: 11.467vw;
-      height: 14.933vw;
-    }
-
+  .map-img {
     &::after {
-      top: 35vw;
-      left: 43.3vw;
       width: 8vw;
       height: 2.133vw;
     }
   }
 
-  @keyframes marker {
-    0% {
-      top: 19vw;
-    }
-    50% {
-      top: 22vw;
-    }
-    100% {
-      top: 19vw;
-    }
+  .map-marker {
+    width: 11.467vw;
+    height: 14.933vw;
   }
 }
