@@ -22,9 +22,7 @@
   &__marker {
     img {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 47vw;
       display: block;
       width: 3.177vw;
       height: 4.167vw;
@@ -36,9 +34,8 @@
       content: "";
       position: absolute;
       top: 28.5vw;
-      left: 50%;
+      left: 48.5vw;
       width: 2.292vw;
-      transform: translateX(-50%);
       height: 0.625vw;
       border-radius: 50%;
       background-color: var(--gold-color);
@@ -48,13 +45,13 @@
 
 @keyframes contacts-marker {
   0% {
-    top: 26vw;
+    top: 24vw;
   }
   50% {
-    top: 27vw;
+    top: 25vw;
   }
   100% {
-    top: 26vw;
+    top: 24vw;
   }
 }
 
@@ -181,14 +178,13 @@
 
     &__marker {
       img {
-        top: 50%;
-        left: 50%;
+        left: 44.6vw;
         width: 7.974vw;
         height: 10.458vw;
       }
 
       &::after {
-        top: 63vw;
+        top: 63.5vw;
         width: 5.752vw;
         height: 1.569vw;
       }
@@ -197,13 +193,13 @@
 
   @keyframes contacts-marker {
     0% {
-      top: 57vw;
+      top: 53vw;
     }
     50% {
-      top: 59vw;
+      top: 55vw;
     }
     100% {
-      top: 57vw;
+      top: 53vw;
     }
   }
 
@@ -315,12 +311,13 @@
 
     &__marker {
       img {
+        left: 43.5vw;
         width: 10.667vw;
         height: 13.867vw;
       }
 
       &::after {
-        top: 80vw;
+        top: 80.5vw;
         width: 7.467vw;
         height: 2.133vw;
       }
@@ -329,13 +326,13 @@
 
   @keyframes contacts-marker {
     0% {
-      top: 75vw;
+      top: 67vw;
     }
     50% {
-      top: 73vw;
+      top: 69vw;
     }
     100% {
-      top: 75vw;
+      top: 67vw;
     }
   }
 

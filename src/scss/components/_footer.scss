@@ -142,7 +142,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 56%;
+    top: 17.5vw;
     left: 15.8vw;
     width: 2.292vw;
     height: 0.625vw;
@@ -157,13 +157,13 @@
 
 @keyframes marker {
   0% {
-    top: 42%;
+    top: 13vw;
   }
   50% {
-    top: 44%;
+    top: 14vw;
   }
   100% {
-    top: 42%;
+    top: 13vw;
   }
 }
 
@@ -244,14 +244,14 @@
 
   .map-marker {
     img {
-      left: 45%;
+      left: 44.3vw;
       width: 7.974vw;
       height: 10.458vw;
     }
 
     &::after {
-      top: 68%;
-      left: 46%;
+      top: 26vw;
+      left: 45.3vw;
       width: 5.752vw;
       height: 1.569vw;
     }
@@ -259,13 +259,13 @@
 
   @keyframes marker {
     0% {
-      top: 43%;
+      top: 15vw;
     }
     50% {
-      top: 45%;
+      top: 17vw;
     }
     100% {
-      top: 43%;
+      top: 15vw;
     }
   }
 }
@@ -348,14 +348,14 @@
 
   .map-marker {
     img {
-      left: 43%;
+      left: 42vw;
       width: 11.467vw;
       height: 14.933vw;
     }
 
     &::after {
-      top: 58%;
-      left: 45%;
+      top: 35vw;
+      left: 43.3vw;
       width: 8vw;
       height: 2.133vw;
     }
@@ -363,13 +363,13 @@
 
   @keyframes marker {
     0% {
-      top: 32%;
+      top: 19vw;
     }
     50% {
-      top: 36%;
+      top: 22vw;
     }
     100% {
-      top: 32%;
+      top: 19vw;
     }
   }
 }
