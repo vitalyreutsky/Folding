@@ -215,7 +215,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 0.7vw;
       left: 0;
       transform: translateY(-50%);
       width: 0.26vw;
@@ -297,7 +297,6 @@
   max-width: 45vw;
 }
 .table-content {
-  border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -306,7 +305,6 @@ table.table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 10px;
   height: auto;
 }
 
@@ -505,6 +503,7 @@ table .table-choice--no {
       line-height: 3.66vw;
       padding-left: 1.7vw;
       &::before {
+        top: 1.7vw;
         width: 0.7vw;
         height: 0.7vw;
       }
@@ -570,7 +569,7 @@ table .table-choice--no {
   .table-content {
     max-width: 250vw;
     margin-bottom: 5.229vw;
-    border-radius: 10px;
+    border-radius: 0;
     overflow: auto;
   }
 
@@ -585,14 +584,18 @@ table .table-choice--no {
   .simplebar-track.simplebar-horizontal {
     width: calc(100% - 3.922vw);
     height: 0.523vw;
-    margin-top: 2.614vw;
     border-radius: 1.307vw;
     background: #efefef;
+  }
+
+  .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+    top: 0;
   }
 
   .simplebar-scrollbar {
     background-color: var(--gold-color);
     height: 100%;
+    border-radius: 1.307vw;
   }
   .simplebar-scrollbar::before {
     background-color: var(--gold-color);
@@ -767,6 +770,7 @@ table .table-choice--no {
       line-height: 7.467vw;
       padding-left: 3vw;
       &::before {
+        top: 4vw;
         width: 1vw;
         height: 1vw;
       }
@@ -825,7 +829,6 @@ table .table-choice--no {
 
   table.table {
     margin-bottom: 4vw;
-    border-radius: 2.667vw;
   }
 
   .simplebar-track.simplebar-horizontal {

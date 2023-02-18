@@ -346,10 +346,12 @@ function swiperCertificates() {
           0: {
             slidesPerView: 1.05,
             spaceBetween: 20,
+            centeredSlides: true,
           },
           600: {
             slidesPerView: 2.1,
             spaceBetween: 50,
+            centeredSlides: false,
           },
         },
       });
