@@ -4143,7 +4143,7 @@ a {
 .characteristic__item::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 0.7vw;
   left: 0;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -4425,6 +4425,7 @@ table .table-choice--no {
     padding-left: 1.7vw;
   }
   .characteristic__item::before {
+    top: 1.7vw;
     width: 0.7vw;
     height: 0.7vw;
   }
@@ -4648,6 +4649,7 @@ table .table-choice--no {
     padding-left: 3vw;
   }
   .characteristic__item::before {
+    top: 4vw;
     width: 1vw;
     height: 1vw;
   }
@@ -5760,7 +5762,7 @@ table .table-choice--no {
     gap: 2.667vw;
   }
   .price-swiper__pagination .swiper-pagination-bullet {
-    height: 1.067vw;
+    height: 0.8vw;
     border-radius: 2.667vw;
   }
   .price .swiper-horizontal > .swiper-pagination-bullets,
