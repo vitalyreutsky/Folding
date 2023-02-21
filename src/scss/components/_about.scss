@@ -155,7 +155,7 @@
 }
 .benefits-item {
   position: relative;
-  height: 17.292vw;
+  height: 19vw;
   border-radius: 10px;
   transition: all 0.35s ease-in;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
@@ -184,7 +184,6 @@
   transition: all 0.35s ease-in;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   z-index: 1;
-  overflow: hidden;
 }
 
 .benefits-title {
@@ -226,7 +225,7 @@
     }
 
     .benefits-content {
-      max-height: 70%;
+      max-height: 100%;
       background: rgba(0, 0, 0, 0.64);
       backdrop-filter: blur(5px);
     }
@@ -461,7 +460,8 @@
     margin-bottom: 5.333vw;
   }
   .partners-img {
-    gap: 8vw;
+    row-gap: 4vw;
+    column-gap: 9vw;
   }
 
   //benefits
