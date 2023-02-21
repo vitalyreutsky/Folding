@@ -47,7 +47,6 @@ function swiperCard() {
         spaceBetween: 50,
         speed: 1000,
         loop: true,
-        autoHeight: true,
         navigation: {
           nextEl: ".mobile-products__swiper-next",
           prevEl: ".mobile-products__swiper-prev",
@@ -85,7 +84,6 @@ function swiperCardFacts() {
         spaceBetween: 50,
         speed: 1000,
         loop: true,
-        autoHeight: true,
         navigation: {
           nextEl: ".facts-swiper__next",
           prevEl: ".facts-swiper__prev",
@@ -232,7 +230,7 @@ catalogSliders.forEach((slider) => {
 
   if (slides.length <= 2) {
     slides.forEach((item) => {
-      item.style.width = "46.2%";
+      item.classList.add("products__swiper--width-half");
     });
   }
 
@@ -242,25 +240,7 @@ catalogSliders.forEach((slider) => {
         .querySelector(".slider-btns")
         .classList.remove("hide-swiper-btns");
     }
-
-    if (slides.length <= 2) {
-      slides.forEach((item) => {
-        item.style.width = "50%";
-      });
-    }
-
-    if (slides.length <= 1) {
-      slides.forEach((item) => {
-        item.style.width = "96.6%";
-      });
-    }
   }
-
-  //if (window.innerWidth < 600) {
-  //  slides.forEach((item) => {
-  //    item.style.width = "97%";
-  //  });
-  //}
 });
 
 //!single

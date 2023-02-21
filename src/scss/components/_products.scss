@@ -31,6 +31,7 @@
 
   &__item {
     display: flex;
+    height: auto;
   }
 }
 
@@ -102,6 +103,10 @@
 
 .mobile-products__swiper-bottom {
   display: none;
+}
+
+.products__swiper--width-half {
+  width: 46.2% !important;
 }
 
 @include tablet {
@@ -187,6 +192,10 @@
   .mobile-products__swiper-bottom {
     display: flex;
   }
+
+  .products__swiper--width-half {
+    width: 46.8% !important;
+  }
 }
 
 @include mobile {
@@ -253,5 +262,9 @@
       line-height: 6.133vw;
       padding-left: 2vw;
     }
+  }
+
+  .products__swiper--width-half {
+    width: 100% !important;
   }
 }
