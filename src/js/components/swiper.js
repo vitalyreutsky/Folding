@@ -161,11 +161,11 @@ const worksSwiper = new Swiper(".works-swiper", {
     1200: {
       coverflowEffect: {
         rotate: 50,
-        stretch: -60,
+        stretch: -40,
         depth: 100,
         modifier: 1,
         slideShadows: false,
-        scale: 0.8,
+        scale: 0.9,
       },
     },
   },
